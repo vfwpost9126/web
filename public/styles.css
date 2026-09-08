@@ -623,3 +623,89 @@ button,input,select,textarea{font-family:var(--font-body)}
 }
 .section-head p{max-width:590px;color:var(--muted);margin:0}
 @media(max-width:700px){.section-head{display:block}.section-head p{margin-top:12px}}
+
+
+/* Social feeds */
+.social-section{
+  background:#fff;
+}
+.social-section-header{
+  align-items:end;
+}
+.social-section-header > p{
+  max-width:650px;
+  margin:0;
+  color:var(--muted);
+}
+.social-feed-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  align-items:start;
+}
+.social-feed-card{
+  min-width:0;
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.social-feed-head{
+  min-height:118px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding:22px 24px;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.social-feed-head h3{
+  margin:4px 0 0;
+  font-family:var(--font-heading);
+  font-size:1.65rem;
+  line-height:1.1;
+}
+.social-kicker{
+  color:var(--red);
+  font-size:.75rem;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.social-embed{
+  width:100%;
+  min-height:650px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  background:#f3f5f8;
+  overflow:hidden;
+}
+.social-embed iframe{
+  display:block;
+  width:100%;
+  max-width:500px;
+  height:650px;
+  border:0;
+  background:#fff;
+}
+.social-privacy-note{
+  margin:18px auto 0;
+  max-width:900px;
+  color:var(--muted);
+  font-size:.88rem;
+  text-align:center;
+}
+@media(max-width:900px){
+  .social-feed-grid{grid-template-columns:1fr}
+  .social-feed-card{max-width:620px;width:100%;margin-inline:auto}
+}
+@media(max-width:600px){
+  .social-section-header{display:block}
+  .social-section-header > p{margin-top:10px}
+  .social-feed-head{display:block;min-height:0;padding:20px}
+  .social-feed-head .btn{margin-top:14px}
+  .social-embed,.social-embed iframe{min-height:600px;height:600px}
+}

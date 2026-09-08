@@ -186,3 +186,11 @@ Reworked the Events page for a cleaner visual hierarchy:
 
 ## v24 Full Audit + Typography Refresh
 Performed a site-wide consistency and technical audit. Updated typography to a more distinctive, no-third-party-request font stack, fixed stale placeholder text, corrected a CSS variable issue, improved scholarship heading styling, added page-specific metadata and favicon support, improved mobile-nav accessibility, and corrected the locally hosted Termly postal address to the Post mailing address. See AUDIT.md for details.
+
+## Social Feeds + Favicon
+- Added a homepage “Follow VFW Post 9126” section with live Facebook Page timeline and Instagram profile embed.
+- Instagram profile: https://www.instagram.com/vfwpost9126/
+- Added Instagram to the site-wide footer Connect links.
+- Replaced the JPG browser icon with a proper favicon set: favicon.ico, 16/32 PNGs, Apple touch icon, 192/512 site icons, and a web app manifest.
+- Social embeds are lazy-loaded and remain subject to Termly Auto Blocker / visitor consent.
+- After deployment, run a fresh Termly scan so any Meta cookies/vendors are categorized and the Cookie Policy can be refreshed.

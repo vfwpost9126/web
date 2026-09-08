@@ -1,0 +1,20 @@
+{
+  "name": "VFW Post 9126",
+  "short_name": "Post 9126",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#111f33",
+  "icons": [
+    {
+      "src": "assets/site-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/site-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -30,3 +30,10 @@
 ## Manual/admin follow-up
 - In Termly itself, update the organization postal address to the mailing address before the next policy regeneration so future generated policies do not revert to the physical address.
 - In Formspree Settings, confirm the successful-submit redirect is set to `https://vfw9126.org/thank-you.html`; current Formspree documentation places this redirect in the Form Settings dashboard, not as a hidden HTML field.
+## v25 additions verified
+- Proper favicon files are present and linked from every HTML page.
+- Facebook Page timeline embed points to VFW Post 9126.
+- Instagram profile embed points to @vfwpost9126.
+- Instagram link is present in the site-wide footer.
+- Social feeds are contained to the homepage and lazy-loaded.
+- Termly remains the first third-party script in each page head; Auto Blocker can intercept third-party iframes.
