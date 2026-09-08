@@ -56,3 +56,7 @@ and the homepage hero includes a Donate CTA.
 The embed uses Zeffy's documented v2 embed structure and includes a direct-link
 fallback. After deployment, verify the embed against the Zeffy dashboard's
 Campaign > Share > More ways to share > Embed code.
+
+## Navigation Button Balance
+Adjusted the header so Donate and Join the VFW use the same height.
+Join remains slightly wider and red; Donate remains gold.

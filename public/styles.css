@@ -225,3 +225,23 @@ a{color:inherit}
   .donate-layout{grid-template-columns:1fr}
   .donate-copy{position:static}
 }
+
+
+/* Balanced primary navigation actions */
+.nav .donate,
+.nav .join{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 18px;
+  border-radius:12px;
+  line-height:1.15;
+  white-space:nowrap;
+}
+.nav .join{
+  min-width:122px;
+}
+.nav .donate{
+  min-width:106px;
+}
