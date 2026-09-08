@@ -60,3 +60,11 @@ Campaign > Share > More ways to share > Embed code.
 ## Navigation Button Balance
 Adjusted the header so Donate and Join the VFW use the same height.
 Join remains slightly wider and red; Donate remains gold.
+
+## 2026–2027 Scholarships
+Expanded `/public/scholarships.html` with the supplied 2026–2027 Patriot's Pen
+and Voice of Democracy information, including eligibility, theme, format,
+deadline, national prize information, entry links, and downloadable local
+copies of the supplied flyers.
+
+Also added the supplied Scholar's App access/security information as a local PDF.
