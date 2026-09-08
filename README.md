@@ -216,3 +216,16 @@ Key changes:
 - Gaming remains branded with the official Gaming Community logo until authentic gaming photos are available.
 - Contact remains photo-light because no strong exterior building photo is currently available.
 - Added web-optimized WebP copies of selected images under public/assets/photos/.
+
+## v28 — Final Pass
+Completed final production polish: SEO metadata, sitemap/robots, structured data, accessibility, keyboard/mobile navigation behavior, image layout stability, contact privacy-note wording, branded 404 page, and a full static link/asset audit.
+
+## v29 — Oklahoma Department Link
+Replaced the former Oklahoma VFW Department calendar link with the official
+VFW Department of Oklahoma homepage across the site.
+
+Events-page card now:
+- Uses the heading "VFW Department of Oklahoma"
+- Describes statewide news, programs, resources, leadership and Department updates
+- Uses the button "Visit Oklahoma VFW"
+- Links to https://vfwoklahoma.org/

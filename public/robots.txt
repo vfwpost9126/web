@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vfw9126.org/sitemap.xml
