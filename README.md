@@ -174,3 +174,11 @@ Gaming:
 - Added Dungeons & Dragons, Magic: The Gathering, board games, fantasy football,
   fantasy baseball, and fantasy basketball.
 - Kept the established Gaming Community branding and Discord invite.
+
+## Events Layout Refinement
+Reworked the Events page for a cleaner visual hierarchy:
+- Next Upcoming Events now occupies the main left column at the top.
+- Regular Post Schedule and Oklahoma VFW Events are stacked in a narrower right column.
+- The upcoming-events agenda is shorter so it does not dominate the page.
+- The Monthly Calendar now spans the full page width underneath.
+- Responsive behavior keeps the layout readable on tablets and phones.

@@ -539,3 +539,61 @@ a{color:inherit}
   .gaming-section-header > p{margin-top:10px}
   .discord-feature-grid{grid-template-columns:1fr}
 }
+
+
+/* Events page: readable upcoming list + supporting schedule, full-width month */
+.events-top-grid{
+  display:grid;
+  grid-template-columns:minmax(0,2.25fr) minmax(280px,.85fr);
+  gap:26px;
+  align-items:start;
+  margin-bottom:30px;
+}
+.events-top-grid .agenda-card{
+  margin:0;
+}
+.events-top-grid .agenda-frame{
+  min-height:340px;
+}
+.events-top-grid .agenda-frame iframe{
+  height:340px;
+}
+.events-top-side{
+  display:grid;
+  gap:18px;
+}
+.events-top-side .side-panel{
+  margin:0;
+}
+.calendar-card-full{
+  width:100%;
+}
+.calendar-card-full .calendar-frame{
+  min-height:650px;
+}
+.calendar-card-full .calendar-frame iframe{
+  height:650px;
+}
+@media(max-width:960px){
+  .events-top-grid{
+    grid-template-columns:1fr;
+  }
+  .events-top-side{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+@media(max-width:700px){
+  .events-top-side{
+    grid-template-columns:1fr;
+  }
+  .events-top-grid .agenda-frame,
+  .events-top-grid .agenda-frame iframe{
+    min-height:430px;
+    height:430px;
+  }
+  .calendar-card-full .calendar-frame,
+  .calendar-card-full .calendar-frame iframe{
+    min-height:560px;
+    height:560px;
+  }
+}
