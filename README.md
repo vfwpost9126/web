@@ -90,3 +90,12 @@ Calendar content may introduce Google cookies or other third-party resources.
 
 ## Calendar Display
 Changed the embedded Post 9126 Google Calendar from Agenda view to Month view.
+
+## Refreshed Termly Policies
+Replaced the locally hosted Privacy Policy and Cookie Policy with the newest
+Termly-generated HTML supplied after the updated cookie scan and policy refresh.
+
+The current Cookie Policy includes the newly detected cookie classifications,
+and the updated Privacy Policy is now the current Termly-generated version.
+Termly attribution remains intact, and the site-wide consent banner plus
+Consent Preferences footer link remain in place.
