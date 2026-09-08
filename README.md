@@ -99,3 +99,12 @@ The current Cookie Policy includes the newly detected cookie classifications,
 and the updated Privacy Policy is now the current Termly-generated version.
 Termly attribution remains intact, and the site-wide consent banner plus
 Consent Preferences footer link remain in place.
+
+## Post 9126 Header Branding
+Updated the site header to use the official circular Post 9126 logo instead of
+the oversized generic VFW wordmark. The accompanying identity now reads
+"VFW Post 9126" on one line with "Glenpool, Oklahoma" beneath it.
+
+Header spacing and logo sizing were tightened so the local Post identity feels
+intentional while preserving room for the existing navigation, Donate button,
+and Join the VFW button.

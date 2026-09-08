@@ -32,12 +32,12 @@ a{color:inherit}
   letter-spacing:.09em;text-transform:uppercase
 }
 .site-header{background:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(17,24,39,.08)}
-.header-main{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:14px 0}
-.brand{display:flex;align-items:center;gap:18px;text-decoration:none;min-width:0}
-.brand img{width:190px;height:auto}
-.brand-copy{border-left:1px solid var(--line);padding-left:17px;line-height:1.15}
-.brand-copy strong{display:block;font-size:1.05rem}
-.brand-copy span{font-size:.8rem;color:var(--muted)}
+.header-main{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0;flex-shrink:0}
+.brand img{width:82px;height:82px;object-fit:cover;border-radius:50%;flex:0 0 82px}
+.brand-copy{line-height:1.15;white-space:nowrap}
+.brand-copy strong{display:block;font-size:1.05rem;color:var(--navy)}
+.brand-copy span{display:block;margin-top:4px;font-size:.8rem;color:var(--muted)}
 .nav{display:flex;align-items:center;gap:5px}
 .nav a{padding:10px 11px;text-decoration:none;font-weight:700;font-size:.89rem;border-radius:9px}
 .nav a:hover,.nav a.active{background:var(--cream);color:var(--vfw-red)}
@@ -181,7 +181,7 @@ a{color:inherit}
   .officer-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:650px){
-  .brand img{width:145px}
+  .brand img{width:68px;height:68px;flex-basis:68px}
   .brand-copy{display:none}
   .hero h1{font-size:3.1rem}
   .section{padding:58px 0}
