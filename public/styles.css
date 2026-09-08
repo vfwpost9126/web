@@ -935,6 +935,7 @@ button,input,select,textarea{font-family:var(--font-body)}
     margin:0;
     border-width:1px;
   }
+  .program-main-photo img,
   .program-small-photo img{
     min-height:0;
     height:auto;

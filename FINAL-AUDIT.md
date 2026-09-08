@@ -63,3 +63,8 @@ no JavaScript syntax errors.
 - Fixed the Guitars for Vets stacked-photo treatment on narrow mobile screens.
 - Removed the mobile negative-margin overlap that could cover the first photo caption.
 - Desktop and tablet styling is unchanged.
+
+## v41 Mobile Caption Fix
+- Fixed the main Guitars for Vets band photo on narrow mobile screens so its image no longer consumes the caption area.
+- Both G4V photo captions now remain visible on mobile.
+- Desktop/tablet layout is unchanged.

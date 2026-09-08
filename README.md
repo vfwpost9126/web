@@ -4,7 +4,7 @@ Cloudflare Workers Static Assets deployment.
 
 ## Current Site Notes
 
-- Current production version: **v40**
+- Current production version: **v41**
 - Production site: **https://vfw9126.org**
 - Static HTML/CSS/JavaScript site with deployable files under `/public`
 - Hosted with **Cloudflare Workers Static Assets**
@@ -57,7 +57,7 @@ Cloudflare Workers Static Assets deployment.
 For each meaningful production change, add a new sequential version section using this format:
 
 ```text
-## v41 — Short Change Name
+## v42 — Short Change Name
 
 Brief summary of the work.
 
@@ -477,3 +477,14 @@ Key changes:
 - Secondary photo uses the full available width on mobile.
 - Both photo captions remain fully visible instead of one card covering the other.
 - Desktop/tablet overlapping presentation remains unchanged.
+
+## v41 — Mobile Band Photo Caption Fix
+
+Corrected the remaining Guitars for Vets mobile photo-card issue.
+
+Key changes:
+- The main band/rehearsal photo now uses `height:auto` on narrow mobile screens.
+- Both G4V photo images use the same 4:3 mobile treatment.
+- The band-photo caption “Music, connection and continued camaraderie.” remains visible.
+- The graduation-photo caption remains visible.
+- Desktop and tablet photo presentation remains unchanged.
