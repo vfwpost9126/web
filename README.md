@@ -189,8 +189,13 @@ Performed a site-wide consistency and technical audit. Updated typography to a m
 
 ## Social Feeds + Favicon
 - Added a homepage “Follow VFW Post 9126” section with live Facebook Page timeline and Instagram profile embed.
-- Instagram profile: https://www.instagram.com/vfwpost9126/
+- Instagram profile: https://www.instagram.com/vfw_post_9126/
 - Added Instagram to the site-wide footer Connect links.
 - Replaced the JPG browser icon with a proper favicon set: favicon.ico, 16/32 PNGs, Apple touch icon, 192/512 site icons, and a web app manifest.
 - Social embeds are lazy-loaded and remain subject to Termly Auto Blocker / visitor consent.
 - After deployment, run a fresh Termly scan so any Meta cookies/vendors are categorized and the Cookie Policy can be refreshed.
+
+## Instagram Correction
+Corrected the Post's Instagram account everywhere on the site to:
+https://www.instagram.com/vfw_post_9126/
+Handle: @vfw_post_9126
