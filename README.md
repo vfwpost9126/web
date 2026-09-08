@@ -74,3 +74,16 @@ Corrected the Patriot's Pen and Voice of Democracy entry links by decoding the
 QR codes directly from the supplied flyers:
 - Patriot's Pen: https://bit.ly/4pyVRDs
 - Voice of Democracy: https://bit.ly/4htOUSf
+
+## Google Calendar Integration
+The Events page now embeds the public VFW Post 9126 Google Calendar.
+
+Calendar ID: `vfwpost9126@gmail.com`
+Timezone: `America/Chicago`
+Display mode: Agenda
+
+The page retains the regular Post schedule as quick-reference information and
+links separately to the Oklahoma VFW Department calendar.
+
+After deployment, run another Termly cookie scan because embedded Google
+Calendar content may introduce Google cookies or other third-party resources.

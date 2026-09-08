@@ -316,3 +316,58 @@ a{color:inherit}
   .info-panel{display:block}
   .info-panel-actions{margin-top:22px;min-width:0}
 }
+
+/* Google Calendar events page */
+.calendar-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:28px;
+  align-items:start;
+}
+.calendar-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.calendar-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:24px 26px;
+  border-bottom:1px solid var(--line);
+}
+.calendar-card-head h2{margin:4px 0 0}
+.calendar-frame{
+  position:relative;
+  width:100%;
+  min-height:660px;
+  background:#fff;
+}
+.calendar-frame iframe{
+  display:block;
+  width:100%;
+  height:660px;
+  border:0;
+}
+.calendar-side{
+  display:grid;
+  gap:20px;
+}
+.calendar-side .side-panel{
+  margin:0;
+}
+@media(max-width:980px){
+  .calendar-layout{grid-template-columns:1fr}
+  .calendar-side{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .calendar-card-head{
+    display:block;
+  }
+  .calendar-card-head .btn{margin-top:16px}
+  .calendar-frame,.calendar-frame iframe{min-height:620px;height:620px}
+  .calendar-side{grid-template-columns:1fr}
+}
