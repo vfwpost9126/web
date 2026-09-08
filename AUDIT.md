@@ -1,39 +1,64 @@
-# VFW Post 9126 Website Audit — v24
+# VFW Post 9126 Website Audit — v37
+
+## Scope
+Fresh production audit of the current Cloudflare Workers Static Assets package after
+Veteran Relief, VA Disability & Benefits Assistance, accessibility, consent, social,
+calendar, donation, and analytics work.
 
 ## Automated checks
-- HTML pages checked: 14
-- Missing internal links: 0
-- Missing local assets: 0
-- Undefined CSS variables: 0
-- PASS: stale calendar placeholder removed
-- PASS: Santa placeholder removed
-- PASS: correct Patriot Pen link
-- PASS: correct Voice of Democracy link
-- PASS: Discord invite present
-- PASS: mailing address present
-- PASS: physical address present
-- PASS: potluck time present
-- PASS: meeting time present
-- PASS: Termly AutoBlock present on main pages
+- Public HTML pages checked: **17**
+- Indexable pages expected in sitemap: **15**
+- Missing internal page links: **0**
+- Missing local assets: **0**
+- Duplicate HTML IDs after corrections: **0**
+- Undefined CSS custom properties after corrections: **0**
+- JavaScript syntax: **PASS**
+- CSS brace balance: **PASS**
+- Local image intrinsic-dimension mismatches over 3%: **0**
+- Skip-link targets: **PASS**
+- Post contact-form controls have explicit labels: **PASS**
+- `target="_blank"` links checked for `rel="noopener"`: **PASS**
+- JSON-LD parsing: **PASS**
+- `robots.txt` includes the sitemap: **PASS**
+- 404 and thank-you utility pages remain `noindex,follow`: **PASS**
+- README changelog continuity: **v1 through v37, no gaps or duplicates**
 
-## Corrections made
-- Replaced the unloaded `Inter` font reference with a no-download typography system: Trebuchet MS for body/UI and Palatino/Book Antiqua for display headings.
-- Applied the display face consistently to headings throughout the site.
-- Fixed the undefined `--red` CSS variable on the Gaming page.
-- Added styling for the scholarship page section heading that previously used an unstyled `section-head` class.
-- Removed stale development/placeholder copy from the homepage calendar area and Snapshots With Santa program card.
-- Corrected the local Privacy Policy and Cookie Policy postal address to the mailing address: 14348 S Broadway St, Glenpool, OK 74033.
-- Kept the visitor/Post physical location as 46 W 145th St South, Glenpool, OK 74033.
-- Added page-specific meta descriptions and the Post logo as a favicon.
-- Improved mobile navigation accessibility with `aria-expanded` and close-on-selection behavior.
+## Corrections made in v37
 
-## Manual/admin follow-up
-- In Termly itself, update the organization postal address to the mailing address before the next policy regeneration so future generated policies do not revert to the physical address.
-- In Formspree Settings, confirm the successful-submit redirect is set to `https://vfw9126.org/thank-you.html`; current Formspree documentation places this redirect in the Form Settings dashboard, not as a hidden HTML field.
-## v25 additions verified
-- Proper favicon files are present and linked from every HTML page.
-- Facebook Page timeline embed points to VFW Post 9126.
-- Instagram profile embed points to @vfwpost9126.
-- Instagram link is present in the site-wide footer.
-- Social feeds are contained to the homepage and lazy-loaded.
-- Termly remains the first third-party script in each page head; Auto Blocker can intercept third-party iframes.
+### Cloudflare canonical routing
+The Worker uses `html_handling: "auto-trailing-slash"`. Public HTML files therefore
+have extensionless canonical routes (for example, `about.html` is served canonically
+at `/about`). Internal navigation, canonical tags, Open Graph URLs, and sitemap entries
+were aligned to those extensionless routes.
+
+### CLS / layout stability
+Cloudflare's Core Web Vitals debug data showed the document shifting from an 8px body
+offset to 0px. A tiny critical `html,body{margin:0}` rule is now present before the
+Termly blocker on every page. Termly remains the first script in each page head.
+
+### CSS cleanup
+Replaced stale undefined variables:
+- `--font-heading` → `--font-display`
+- `--red` → `--vfw-red`
+- `--gold` → `--vfw-gold`
+
+### Image / performance cleanup
+- Corrected homepage hero intrinsic dimensions to match the actual 1414×1800 image.
+- Updated hero alt text to match the current memorial-group photograph.
+- Added `assets/gaming-logo.webp` for web delivery; the original PNG remains available.
+- Homepage Gaming logo and service-branch emblems below the fold now lazy-load.
+
+### Privacy-policy HTML cleanup
+Removed repeated Termly-generated `id="control"` attributes from the locally hosted
+Privacy Policy markup. Policy wording was not changed.
+
+## Current integrations verified in source
+- Termly Auto Blocker and Consent Preferences
+- Formspree contact form
+- Zeffy donation embed
+- Google Calendar agenda/month views
+- Facebook and Instagram embeds
+- Gaming Discord
+- Veteran Relief Jotform
+- VA Disability / Benefits Assistance contact routing
+- Cloudflare Workers Static Assets configuration

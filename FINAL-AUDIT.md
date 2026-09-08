@@ -1,31 +1,50 @@
-# VFW Post 9126 — v28 Final Audit
-
-- HTML pages checked: 14
-- Static audit issues: 0
-- Added canonical URLs, Open Graph URL/site metadata, Twitter cards, Organization structured data, sitemap.xml, and robots.txt.
-- Added skip links, keyboard focus styling, reduced-motion support, stronger mobile menu behavior, and aria-current navigation state.
-- Added intrinsic dimensions to local images to reduce layout shift.
-- Polished contact-form privacy wording and branded the 404 page.
-- Preserved real Post photography, current programs, addresses, Discord, social feeds, Termly, Google Calendar, Zeffy, and Formspree integration.
+# VFW Post 9126 — v37 Final Production Audit
 
 ## Result
-No static issues found in the final pass.
+**PASS — no blocking static-site issues remain in the v37 package.**
 
-## v29 Follow-up
-- Replaced legacy Oklahoma Department calendar links with the Department homepage.
-- Events page now directs visitors to the broader VFW Department of Oklahoma site.
+The current package contains 17 HTML pages, with 15 indexable public pages represented
+in the sitemap. Automated validation found no missing internal links, no missing local
+assets, no duplicate IDs, no undefined CSS variables, no broken skip-link targets, and
+no JavaScript syntax errors.
 
-## v35 Follow-up
-- Added dedicated Veteran Relief page.
-- Added non-emergency / Veterans Crisis Line notice.
-- Added physical-address Get Directions button.
-- Added Accessibility Statement and site-wide footer link.
-- Repaired skip-link target IDs across all HTML pages.
-- Added new pages to sitemap.
+## Final items corrected
+- Cloudflare canonical routing now uses extensionless public URLs.
+- Internal navigation no longer points visitors through unnecessary `.html` redirects.
+- Canonical tags, Open Graph URLs, and sitemap URLs match Cloudflare routing behavior.
+- Active navigation works with extensionless paths.
+- The Cloudflare-reported 8px body-margin CLS pattern has a targeted critical-CSS fix.
+- Homepage hero intrinsic dimensions and description now match the actual image.
+- Gaming logo delivery was reduced substantially with a web-optimized WebP copy.
+- Below-the-fold homepage logo assets now lazy-load where appropriate.
+- Remaining undefined CSS variables were corrected.
+- Duplicate Termly-generated Privacy Policy IDs were removed without altering legal text.
 
-## v36 Follow-up
-- Added dedicated VA Disability & Benefits Assistance page.
-- Added separate financial-relief and VA-benefits contact pathways.
-- Added privacy warning for sensitive claim/personal information.
-- Added homepage, Programs, Veteran Relief, footer, sitemap, and contact-form routing.
-- No public referral contacts or claim representatives are named.
+## Site structure verified
+- Home
+- About
+- Programs
+- Events
+- Scholarships
+- Gaming
+- Officers
+- Contact
+- Membership
+- Donate
+- Veteran Relief
+- VA Disability & Benefits Assistance
+- Accessibility
+- Privacy Policy
+- Cookie Policy
+- Thank-you page (`noindex`)
+- Custom 404 (`noindex`)
+
+## Operational notes
+- Deployment remains **Cloudflare Workers Static Assets**, not Cloudflare Pages.
+- `wrangler.jsonc` continues to use `html_handling: "auto-trailing-slash"` and
+  `not_found_handling: "404-page"`.
+- Formspree is currently on the free plan, so a custom post-submission redirect is not available. The branded `/thank-you` page remains in the site but is not automatically used after form submission.
+- Cloudflare Web Analytics should collect additional real-user samples after deployment
+  before the CLS score is judged; the previous sample count was very small.
+- No new third-party tracker or embed was added in v37, so this release does not itself
+  require a new Termly scan.

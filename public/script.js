@@ -32,10 +32,18 @@ if (btn && nav) {
   });
 }
 
-const path = location.pathname.split('/').pop() || 'index.html';
+const normalizePath = value => {
+  const pathname = new URL(value, location.origin).pathname
+    .replace(/\/index(?:\.html)?$/, '/')
+    .replace(/\.html$/, '')
+    .replace(/\/$/, '');
+  return pathname || '/';
+};
+
+const currentPath = normalizePath(location.pathname);
 document.querySelectorAll('.nav a').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href === path) {
+  const linkPath = normalizePath(a.href);
+  if (linkPath === currentPath) {
     a.classList.add('active');
     a.setAttribute('aria-current', 'page');
   }

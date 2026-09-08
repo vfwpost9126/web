@@ -4,7 +4,7 @@ Cloudflare Workers Static Assets deployment.
 
 ## Current Site Notes
 
-- Current production version: **v36**
+- Current production version: **v37**
 - Production site: **https://vfw9126.org**
 - Static HTML/CSS/JavaScript site with deployable files under `/public`
 - Hosted with **Cloudflare Workers Static Assets**
@@ -12,7 +12,7 @@ Cloudflare Workers Static Assets deployment.
 - Deployment command: `npx wrangler deploy`
 - Cloudflare Web Analytics is enabled for traffic and Core Web Vitals
 - **Termly** handles consent management, Privacy Policy, Cookie Policy, and consent preferences
-- **Formspree** handles general website contact-form submissions
+- **Formspree** handles general website contact-form submissions; the current free plan does not provide a custom redirect
 - **Zeffy** handles online donations
 - **Jotform** handles Veteran Relief requests
 - **Google Calendar** provides the public Post events calendar
@@ -39,6 +39,7 @@ Cloudflare Workers Static Assets deployment.
 ## Important Design / Technical Rules
 
 - Do **not** migrate the site to Cloudflare Pages; this site uses **Cloudflare Workers Static Assets**.
+- Public page URLs use Cloudflare's canonical **extensionless routes** (for example, `/about`, not `/about.html`).
 - Preserve the circular Post 9126 logo in the header and footer.
 - Preserve natural image aspect ratios. When CSS overrides image dimensions, use `height:auto`, an appropriate `aspect-ratio`, and/or `object-fit` so images do not stretch.
 - Keep the physical/Post location and mailing address clearly distinguished.
@@ -55,7 +56,7 @@ Cloudflare Workers Static Assets deployment.
 For each meaningful production change, add a new sequential version section using this format:
 
 ```text
-## v37 — Short Change Name
+## v38 — Short Change Name
 
 Brief summary of the work.
 
@@ -89,12 +90,13 @@ the `/public` directory used for Cloudflare Workers Static Assets deployment.
 
 The deployable website is in `/public`.
 
-## v3 — Formspree Thank-You Redirect
+## v3 — Formspree Contact Handling
 A branded thank-you page is included at `/public/thank-you.html`.
 
-In Formspree, set the form's Thank You / Redirect URL to:
+The Post currently uses Formspree's free plan, which does not provide a custom
+post-submission redirect. The branded thank-you page therefore exists as a site
+asset but is not automatically used after a Formspree submission.
 
-`https://vfw9126.org/thank-you.html`
 
 ## v4 — Privacy Policy
 Termly Privacy Policy added at `/public/privacy-policy.html`.
@@ -415,3 +417,26 @@ Key changes:
 - Veteran Relief page cross-links veterans who actually need disability/benefits help.
 - Added "VA Benefits Help" to the site-wide footer.
 - Added the new page to the sitemap.
+
+## v37 — Final Audit, Routing & Performance Polish
+
+Completed a fresh production audit after the Veteran Relief, VA Benefits Assistance,
+accessibility, and analytics work.
+
+Key changes:
+- Aligned canonical URLs, internal links, Open Graph URLs, and `sitemap.xml` with
+  Cloudflare Workers Static Assets `auto-trailing-slash` behavior by using
+  extensionless public routes such as `/about` and `/veteran-relief`.
+- Updated active-navigation JavaScript so it works correctly on extensionless routes.
+- Added a tiny critical `html,body{margin:0}` rule before the Termly blocker to address
+  the 8px-to-0px body shift visible in Cloudflare's CLS debug data while keeping
+  Termly as the first script in the page head.
+- Fixed remaining undefined CSS variables (`--font-heading`, `--red`, and `--gold`).
+- Corrected the homepage hero image intrinsic dimensions and updated its alt text.
+- Added a web-optimized Gaming Community logo while preserving the original PNG source.
+- Lazy-loaded the homepage Gaming logo and service-branch emblems below the fold.
+- Removed duplicate `id="control"` values from the locally hosted Termly Privacy Policy
+  markup without changing policy wording.
+- Refreshed `AUDIT.md` and `FINAL-AUDIT.md` to reflect the current 17-page site.
+- Revalidated internal links, local assets, duplicate IDs, CSS variables, JavaScript,
+  sitemap coverage, image proportions, and changelog continuity.
