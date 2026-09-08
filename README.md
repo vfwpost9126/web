@@ -199,3 +199,20 @@ Performed a site-wide consistency and technical audit. Updated typography to a m
 Corrected the Post's Instagram account everywhere on the site to:
 https://www.instagram.com/vfw_post_9126/
 Handle: @vfw_post_9126
+
+## v27 — Authentic Post Photography Pass
+Integrated real VFW Post 9126 photography supplied by the Post across the site.
+
+Key changes:
+- Homepage hero now features a real Post member group photo, with the Post 9126 logo as a badge.
+- Homepage Guitars for Vets, Community Wednesday, and Snapshots With Santa cards now use real program/community photography.
+- Added a Post-life photo strip to the homepage.
+- About page now uses real memorial/community and family imagery.
+- Programs page now uses Guitars for Vets rehearsal, graduation, alumni, community, and Snapshots With Santa photography.
+- Events page includes a compact photo strip showing remembrance, community gatherings, and holiday traditions.
+- Membership page now includes an authentic continued-service/community photo callout.
+- Donate page now includes a real Post outreach image.
+- Scholarships page includes a youth/civic-service photo callout without presenting it as a scholarship-award photo.
+- Gaming remains branded with the official Gaming Community logo until authentic gaming photos are available.
+- Contact remains photo-light because no strong exterior building photo is currently available.
+- Added web-optimized WebP copies of selected images under public/assets/photos/.
