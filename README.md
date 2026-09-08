@@ -68,3 +68,9 @@ deadline, national prize information, entry links, and downloadable local
 copies of the supplied flyers.
 
 Also added the supplied Scholar's App access/security information as a local PDF.
+
+## Scholarship Link Correction
+Corrected the Patriot's Pen and Voice of Democracy entry links by decoding the
+QR codes directly from the supplied flyers:
+- Patriot's Pen: https://bit.ly/4pyVRDs
+- Voice of Democracy: https://bit.ly/4htOUSf
