@@ -2,26 +2,31 @@
 
 Cloudflare Workers Static Assets deployment.
 
-## Cloudflare dashboard settings
+## v1 — Initial Website Build
+Created the initial VFW Post 9126 website and deployable static-site structure,
+including the core public pages, shared navigation/footer, Post branding, and
+the `/public` directory used for Cloudflare Workers Static Assets deployment.
+
+## v2 — Cloudflare Worker Deployment Settings
 - Build command: leave blank
 - Deploy command: `npx wrangler deploy`
 
 The deployable website is in `/public`.
 
-## Formspree redirect
+## v3 — Formspree Thank-You Redirect
 A branded thank-you page is included at `/public/thank-you.html`.
 
 In Formspree, set the form's Thank You / Redirect URL to:
 
 `https://vfw9126.org/thank-you.html`
 
-## Privacy Policy
+## v4 — Privacy Policy
 Termly Privacy Policy added at `/public/privacy-policy.html`.
 Footer links on all pages now point to the policy, and the contact-form privacy notice links to it.
 
 The Termly attribution is preserved.
 
-## Cookie Policy
+## v5 — Cookie Policy
 Termly Cookie Policy added at `/public/cookie-policy.html`.
 Footer links on all pages now include both Privacy Policy and Cookie Policy.
 The local Privacy Policy page also links to the Cookie Policy.
@@ -30,7 +35,7 @@ Note: the Cookie Policy references a Termly Cookie Preference Center. The actual
 Termly consent-banner / preference-center script still needs to be added once
 its embed code is provided.
 
-## Termly Consent Banner
+## v6 — Termly Consent Banner
 Installed the Termly Consent Management Platform on every HTML page using:
 
 `https://app.termly.io/resource-blocker/d2a9b477-4a7d-46b9-b0a6-2892b2298f8f?autoBlock=on`
@@ -38,7 +43,7 @@ Installed the Termly Consent Management Platform on every HTML page using:
 The script is placed immediately after the opening `<head>` tag so Termly can
 auto-block non-essential third-party scripts before they run.
 
-## Consent Preferences
+## v7 — Consent Preferences
 Added Termly's permanent consent-preferences link to every page footer:
 
 `<a href="#" class="termly-display-preferences">Consent Preferences</a>`
@@ -46,7 +51,7 @@ Added Termly's permanent consent-preferences link to every page footer:
 Visitors can use it at any time to reopen the Termly preference center and
 change their cookie choices.
 
-## Donations / Zeffy
+## v8 — Donations / Zeffy
 Added `/public/donate.html` and embedded the Zeffy donation campaign:
 https://www.zeffy.com/en-US/donation-form/support-local-veterans-through-vfw-post--9126
 
@@ -57,11 +62,11 @@ The embed uses Zeffy's documented v2 embed structure and includes a direct-link
 fallback. After deployment, verify the embed against the Zeffy dashboard's
 Campaign > Share > More ways to share > Embed code.
 
-## Navigation Button Balance
+## v9 — Navigation Button Balance
 Adjusted the header so Donate and Join the VFW use the same height.
 Join remains slightly wider and red; Donate remains gold.
 
-## 2026–2027 Scholarships
+## v10 — 2026–2027 Scholarships
 Expanded `/public/scholarships.html` with the supplied 2026–2027 Patriot's Pen
 and Voice of Democracy information, including eligibility, theme, format,
 deadline, national prize information, entry links, and downloadable local
@@ -69,13 +74,13 @@ copies of the supplied flyers.
 
 Also added the supplied Scholar's App access/security information as a local PDF.
 
-## Scholarship Link Correction
+## v11 — Scholarship Link Correction
 Corrected the Patriot's Pen and Voice of Democracy entry links by decoding the
 QR codes directly from the supplied flyers:
 - Patriot's Pen: https://bit.ly/4pyVRDs
 - Voice of Democracy: https://bit.ly/4htOUSf
 
-## Google Calendar Integration
+## v12 — Google Calendar Integration
 The Events page now embeds the public VFW Post 9126 Google Calendar.
 
 Calendar ID: `vfwpost9126@gmail.com`
@@ -88,10 +93,10 @@ links separately to the Oklahoma VFW Department calendar.
 After deployment, run another Termly cookie scan because embedded Google
 Calendar content may introduce Google cookies or other third-party resources.
 
-## Calendar Display
+## v13 — Calendar Month View
 Changed the embedded Post 9126 Google Calendar from Agenda view to Month view.
 
-## Refreshed Termly Policies
+## v14 — Refreshed Termly Policies
 Replaced the locally hosted Privacy Policy and Cookie Policy with the newest
 Termly-generated HTML supplied after the updated cookie scan and policy refresh.
 
@@ -100,7 +105,7 @@ and the updated Privacy Policy is now the current Termly-generated version.
 Termly attribution remains intact, and the site-wide consent banner plus
 Consent Preferences footer link remain in place.
 
-## Post 9126 Header Branding
+## v15 — Post 9126 Header Branding
 Updated the site header to use the official circular Post 9126 logo instead of
 the oversized generic VFW wordmark. The accompanying identity now reads
 "VFW Post 9126" on one line with "Glenpool, Oklahoma" beneath it.
@@ -109,7 +114,7 @@ Header spacing and logo sizing were tightened so the local Post identity feels
 intentional while preserving room for the existing navigation, Donate button,
 and Join the VFW button.
 
-## Events Page: Upcoming Events List
+## v16 — Events Page: Upcoming Events List
 Kept the Google Calendar in Month view and added a second, shorter Google
 Calendar Agenda view directly beneath it. This gives visitors an at-a-glance
 monthly calendar plus a more readable list of upcoming event names, dates,
@@ -118,7 +123,7 @@ and times.
 The agenda section is responsive and includes a direct link to the full
 Google Calendar.
 
-## Gaming Discord
+## v17 — Gaming Discord
 Added the Post 9126 Gaming Community Discord invite:
 https://discord.gg/PSAdURVZNG
 
@@ -130,26 +135,26 @@ Placement:
 
 The main navigation remains unchanged to avoid crowding the header.
 
-## Monthly Meeting Potluck
+## v18 — Monthly Meeting Potluck
 Updated recurring monthly meeting information to note:
 - Potluck at 5:00 PM
 - Post meeting at 5:30 PM
 - Third Sunday of each month
 
-## Monthly Meeting Potluck Correction
+## v19 — Monthly Meeting Potluck Correction
 Updated all remaining meeting references so they consistently show:
 - Potluck at 5:00 PM
 - Monthly Post meeting at 5:30 PM
 - Third Sunday of each month
 
-## Address Clarification
+## v20 — Address Clarification
 Updated Post address information to distinguish:
 - Physical address: 46 W 145th St South, Glenpool, OK 74033
 - Mailing address: 14348 S Broadway St, Glenpool, OK 74033
 
 The physical address remains the location visitors should use to come to the Post.
 
-## Address Cleanup
+## v21 — Address Cleanup
 Clarified the Post's two addresses:
 - Physical/Post location: 46 W 145th St South, Glenpool, OK 74033
 - Mailing address: 14348 S Broadway St, Glenpool, OK 74033
@@ -160,7 +165,7 @@ The Contact page now shows each address once, clearly labeled. Site footers now 
 The Contact page monthly meeting information also now includes the 5:00 PM potluck before
 the 5:30 PM meeting.
 
-## Events + Gaming Refresh
+## v22 — Events + Gaming Refresh
 Events:
 - Moved "Next Upcoming Events" agenda/list view above the monthly calendar.
 - Kept the monthly calendar below with the Regular Post Schedule and Oklahoma VFW Events cards.
@@ -175,7 +180,7 @@ Gaming:
   fantasy baseball, and fantasy basketball.
 - Kept the established Gaming Community branding and Discord invite.
 
-## Events Layout Refinement
+## v23 — Events Layout Refinement
 Reworked the Events page for a cleaner visual hierarchy:
 - Next Upcoming Events now occupies the main left column at the top.
 - Regular Post Schedule and Oklahoma VFW Events are stacked in a narrower right column.
@@ -184,10 +189,10 @@ Reworked the Events page for a cleaner visual hierarchy:
 - Responsive behavior keeps the layout readable on tablets and phones.
 
 
-## v24 Full Audit + Typography Refresh
+## v24 — Full Audit + Typography Refresh
 Performed a site-wide consistency and technical audit. Updated typography to a more distinctive, no-third-party-request font stack, fixed stale placeholder text, corrected a CSS variable issue, improved scholarship heading styling, added page-specific metadata and favicon support, improved mobile-nav accessibility, and corrected the locally hosted Termly postal address to the Post mailing address. See AUDIT.md for details.
 
-## Social Feeds + Favicon
+## v25 — Social Feeds + Favicon
 - Added a homepage “Follow VFW Post 9126” section with live Facebook Page timeline and Instagram profile embed.
 - Instagram profile: https://www.instagram.com/vfw_post_9126/
 - Added Instagram to the site-wide footer Connect links.
@@ -195,7 +200,7 @@ Performed a site-wide consistency and technical audit. Updated typography to a m
 - Social embeds are lazy-loaded and remain subject to Termly Auto Blocker / visitor consent.
 - After deployment, run a fresh Termly scan so any Meta cookies/vendors are categorized and the Cookie Policy can be refreshed.
 
-## Instagram Correction
+## v26 — Instagram Correction
 Corrected the Post's Instagram account everywhere on the site to:
 https://www.instagram.com/vfw_post_9126/
 Handle: @vfw_post_9126
