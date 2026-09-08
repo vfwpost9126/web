@@ -417,3 +417,125 @@ a{color:inherit}
   .agenda-card-head .btn{margin-top:16px}
   .agenda-frame,.agenda-frame iframe{min-height:500px;height:500px}
 }
+
+
+/* Events page hierarchy */
+.agenda-card-first{
+  margin-top:0;
+  margin-bottom:30px;
+}
+.calendar-layout-secondary{
+  margin-top:0;
+}
+
+/* Expanded Gaming Community page */
+.gaming-section-header{
+  align-items:end;
+  margin-bottom:28px;
+}
+.gaming-section-header > p{
+  max-width:620px;
+  color:var(--muted);
+  margin:0;
+}
+.gaming-category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.gaming-category{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.gaming-category-label{
+  display:inline-block;
+  margin-bottom:12px;
+  color:var(--red);
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.gaming-category h3{
+  margin:0 0 10px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.75rem;
+}
+.gaming-category p{
+  color:var(--muted);
+}
+.gaming-category ul{
+  margin:18px 0 0;
+  padding-left:20px;
+}
+.gaming-category li{
+  margin:9px 0;
+  line-height:1.45;
+}
+.discord-feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.discord-feature{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+}
+.discord-feature > span{
+  display:grid;
+  place-items:center;
+  flex:0 0 46px;
+  width:46px;
+  height:46px;
+  border-radius:13px;
+  background:var(--navy);
+  color:#fff;
+  font-weight:900;
+  font-size:1.15rem;
+}
+.discord-feature h3{
+  margin:0 0 6px;
+  font-size:1.12rem;
+}
+.discord-feature p{
+  margin:0;
+  color:var(--muted);
+}
+.gaming-cta{
+  margin-top:28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  background:var(--navy);
+  color:#fff;
+  border-radius:22px;
+  padding:30px;
+}
+.gaming-cta h2{
+  margin:4px 0 8px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+}
+.gaming-cta p{
+  margin:0;
+  max-width:760px;
+  color:#d4dbe5;
+}
+@media(max-width:900px){
+  .gaming-category-grid{grid-template-columns:1fr}
+  .gaming-cta{display:block}
+  .gaming-cta .actions{margin-top:20px}
+}
+@media(max-width:700px){
+  .gaming-section-header{display:block}
+  .gaming-section-header > p{margin-top:10px}
+  .discord-feature-grid{grid-template-columns:1fr}
+}

@@ -159,3 +159,18 @@ The Contact page now shows each address once, clearly labeled. Site footers now 
 
 The Contact page monthly meeting information also now includes the 5:00 PM potluck before
 the 5:30 PM meeting.
+
+## Events + Gaming Refresh
+Events:
+- Moved "Next Upcoming Events" agenda/list view above the monthly calendar.
+- Kept the monthly calendar below with the Regular Post Schedule and Oklahoma VFW Events cards.
+- Replaced development-style calendar copy with visitor-facing event copy.
+- Renamed the month section to "Monthly Calendar."
+
+Gaming:
+- Expanded the Gaming page to reflect the current Discord/community structure.
+- Added PC & Online Gaming, Tabletop Gaming, and Fantasy Sports sections.
+- Added Looking for Group, Game Suggestions, Tech Help, and Tournaments.
+- Added Dungeons & Dragons, Magic: The Gathering, board games, fantasy football,
+  fantasy baseball, and fantasy basketball.
+- Kept the established Gaming Community branding and Discord invite.
