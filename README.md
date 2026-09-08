@@ -14,3 +14,9 @@ A branded thank-you page is included at `/public/thank-you.html`.
 In Formspree, set the form's Thank You / Redirect URL to:
 
 `https://vfw9126.org/thank-you.html`
+
+## Privacy Policy
+Termly Privacy Policy added at `/public/privacy-policy.html`.
+Footer links on all pages now point to the policy, and the contact-form privacy notice links to it.
+
+The Termly attribution is preserved.
