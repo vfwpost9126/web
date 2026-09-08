@@ -2,6 +2,82 @@
 
 Cloudflare Workers Static Assets deployment.
 
+## Current Site Notes
+
+- Current production version: **v36**
+- Production site: **https://vfw9126.org**
+- Static HTML/CSS/JavaScript site with deployable files under `/public`
+- Hosted with **Cloudflare Workers Static Assets**
+- Source controlled through **GitHub**
+- Deployment command: `npx wrangler deploy`
+- Cloudflare Web Analytics is enabled for traffic and Core Web Vitals
+- **Termly** handles consent management, Privacy Policy, Cookie Policy, and consent preferences
+- **Formspree** handles general website contact-form submissions
+- **Zeffy** handles online donations
+- **Jotform** handles Veteran Relief requests
+- **Google Calendar** provides the public Post events calendar
+- Facebook and Instagram content are embedded on the homepage
+- Gaming Community Discord: https://discord.gg/PSAdURVZNG
+- Post email: `vfwpost9126@gmail.com`
+- Physical/Post location: **46 W 145th St South, Glenpool, OK 74033**
+- Mailing address: **14348 S Broadway St, Glenpool, OK 74033**
+
+## Veteran Assistance Routing
+
+- **Veteran Relief Assistance** is the pathway for limited financial assistance.
+- Veteran Relief requests use the dedicated Jotform.
+- The Veteran Relief Committee may approve assistance up to **$300**.
+- Requests over $300 go to the Post membership for consideration at the next regular meeting.
+- Approved Veteran Relief payments go directly to the party owed, not to the applicant.
+- Assistance is subject to review and the availability of Veteran Relief funds.
+- **VA Disability & Benefits Assistance** is a separate pathway for claims, appeals, benefits questions, and related assistance.
+- Post 9126 helps connect veterans with an appropriate resource based on the situation they describe.
+- Do **not** publicly list individual benefits/referral contacts unless specifically approved for publication.
+- Do **not** state or imply that Post 9126 has a designated Service Officer unless that becomes true and is intentionally made public.
+- Do **not** collect Social Security numbers, VA claim numbers, medical records, passwords, or other sensitive claim information through the general website contact form.
+
+## Important Design / Technical Rules
+
+- Do **not** migrate the site to Cloudflare Pages; this site uses **Cloudflare Workers Static Assets**.
+- Preserve the circular Post 9126 logo in the header and footer.
+- Preserve natural image aspect ratios. When CSS overrides image dimensions, use `height:auto`, an appropriate `aspect-ratio`, and/or `object-fit` so images do not stretch.
+- Keep the physical/Post location and mailing address clearly distinguished.
+- Keep **Veteran Relief** and **VA Disability / Benefits Assistance** as separate assistance pathways.
+- Keep Operation Encore identified as a **Guitars for Vets alumni program**, not a separate Post program.
+- Preserve the established Gaming Community tagline: **“Veteran-led. Community-welcoming. Built around connection.”**
+- Keep the main navigation uncluttered; Gaming Discord remains accessible from the Gaming page, homepage, and footer rather than as a main-nav item.
+- Run a fresh Termly cookie scan after adding new third-party embeds, scripts, or services.
+- Update `sitemap.xml` when adding or removing public pages.
+- Validate internal links and local assets before packaging a release.
+
+## Updating This Change Log
+
+For each meaningful production change, add a new sequential version section using this format:
+
+```text
+## v37 — Short Change Name
+
+Brief summary of the work.
+
+Key changes:
+- Change one
+- Change two
+- Change three
+```
+
+Use the next sequential version number for meaningful production changes.
+
+Small typo fixes, internal documentation updates, and other changes that do not materially affect the public website do not need their own version.
+
+When creating a new production package:
+
+- Update this README.
+- Update `FINAL-AUDIT.md` when appropriate.
+- Validate all internal links and local assets.
+- Preserve image aspect ratios.
+- Update `sitemap.xml` when adding or removing public pages.
+- Produce both a full deployment ZIP and a changed-files-only ZIP when practical.
+
 ## v1 — Initial Website Build
 Created the initial VFW Post 9126 website and deployable static-site structure,
 including the core public pages, shared navigation/footer, Post branding, and
