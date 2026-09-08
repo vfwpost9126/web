@@ -87,3 +87,6 @@ links separately to the Oklahoma VFW Department calendar.
 
 After deployment, run another Termly cookie scan because embedded Google
 Calendar content may introduce Google cookies or other third-party resources.
+
+## Calendar Display
+Changed the embedded Post 9126 Google Calendar from Agenda view to Month view.
