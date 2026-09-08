@@ -4,7 +4,7 @@ Cloudflare Workers Static Assets deployment.
 
 ## Current Site Notes
 
-- Current production version: **v37**
+- Current production version: **v39**
 - Production site: **https://vfw9126.org**
 - Static HTML/CSS/JavaScript site with deployable files under `/public`
 - Hosted with **Cloudflare Workers Static Assets**
@@ -41,6 +41,7 @@ Cloudflare Workers Static Assets deployment.
 - Do **not** migrate the site to Cloudflare Pages; this site uses **Cloudflare Workers Static Assets**.
 - Public page URLs use Cloudflare's canonical **extensionless routes** (for example, `/about`, not `/about.html`).
 - Preserve the circular Post 9126 logo in the header and footer.
+- Preserve the established Post phrase **“Honoring The Past. Embracing The Future.”** as the primary Post message.
 - Preserve natural image aspect ratios. When CSS overrides image dimensions, use `height:auto`, an appropriate `aspect-ratio`, and/or `object-fit` so images do not stretch.
 - Keep the physical/Post location and mailing address clearly distinguished.
 - Keep **Veteran Relief** and **VA Disability / Benefits Assistance** as separate assistance pathways.
@@ -56,7 +57,7 @@ Cloudflare Workers Static Assets deployment.
 For each meaningful production change, add a new sequential version section using this format:
 
 ```text
-## v38 — Short Change Name
+## v40 — Short Change Name
 
 Brief summary of the work.
 
@@ -440,3 +441,28 @@ Key changes:
 - Refreshed `AUDIT.md` and `FINAL-AUDIT.md` to reflect the current 17-page site.
 - Revalidated internal links, local assets, duplicate IDs, CSS variables, JavaScript,
   sitemap coverage, image proportions, and changelog continuity.
+
+## v38 — Established Post Motto
+
+Elevated the Post's long-standing phrase, **“Honoring The Past. Embracing The Future.”**,
+into the site's primary identity message.
+
+Key changes:
+- Homepage hero now uses “Honoring The Past. Embracing The Future.” as the main headline.
+- “Serving Veterans. Strengthening Community.” remains as a secondary supporting message.
+- About page now prominently carries the established Post phrase.
+- Site-wide footer now includes the established Post phrase as part of the Post identity.
+- Homepage metadata and structured data now reflect the established motto.
+- Added a maintenance rule so future edits preserve the phrase as the primary Post message.
+
+## v39 — Motto Order Correction
+
+Corrected the Post's established phrase to the exact long-standing wording and order:
+
+**“Honoring The Past. Embracing The Future.”**
+
+Key changes:
+- Homepage hero headline now uses the correct phrase and order.
+- About page and site-wide footer now use the correct phrase.
+- Homepage metadata and structured data slogan were corrected.
+- README maintenance guidance now preserves the exact established phrase.

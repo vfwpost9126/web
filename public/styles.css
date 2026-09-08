@@ -1328,3 +1328,30 @@ button,input,select,textarea{font-family:var(--font-body)}
     margin-top:20px;
   }
 }
+
+
+/* v38 Established Post motto */
+.hero-supporting-message{
+  margin:18px 0 8px;
+  font-family:var(--font-display);
+  font-size:clamp(1.18rem,2vw,1.5rem);
+  font-weight:700;
+  letter-spacing:.01em;
+  color:var(--vfw-gold);
+}
+.page-motto{
+  margin:8px 0 14px;
+  font-family:var(--font-display);
+  font-size:clamp(1.35rem,2.5vw,1.9rem);
+  font-weight:700;
+  line-height:1.2;
+  color:#fff;
+}
+.footer-motto{
+  margin:14px 0 8px !important;
+  font-family:var(--font-display);
+  font-size:1.08rem;
+  font-weight:700;
+  line-height:1.3;
+  color:var(--vfw-gold) !important;
+}

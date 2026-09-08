@@ -48,3 +48,13 @@ no JavaScript syntax errors.
   before the CLS score is judged; the previous sample count was very small.
 - No new third-party tracker or embed was added in v37, so this release does not itself
   require a new Termly scan.
+
+## v38 Identity Update
+- Established Post phrase “Honoring The Past. Embracing The Future.” is now the primary homepage message.
+- “Serving Veterans. Strengthening Community.” remains as secondary supporting language.
+- Motto is carried through the About page and site-wide footer.
+- No routing, privacy, consent, form, or third-party integration behavior changed.
+
+## v39 Motto Correction
+- Corrected the established Post phrase everywhere to **“Honoring The Past. Embracing The Future.”**
+- No routing, form, privacy, consent, or integration behavior changed.
