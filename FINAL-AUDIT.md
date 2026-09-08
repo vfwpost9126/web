@@ -14,3 +14,11 @@ No static issues found in the final pass.
 ## v29 Follow-up
 - Replaced legacy Oklahoma Department calendar links with the Department homepage.
 - Events page now directs visitors to the broader VFW Department of Oklahoma site.
+
+## v35 Follow-up
+- Added dedicated Veteran Relief page.
+- Added non-emergency / Veterans Crisis Line notice.
+- Added physical-address Get Directions button.
+- Added Accessibility Statement and site-wide footer link.
+- Repaired skip-link target IDs across all HTML pages.
+- Added new pages to sitemap.

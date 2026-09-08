@@ -1070,3 +1070,133 @@ button,input,select,textarea{font-family:var(--font-body)}
 @media(max-width:900px){
   .relief-panel{padding:28px}
 }
+
+
+/* v35 Veteran Relief page, directions, and accessibility */
+.relief-hero-actions{margin-top:26px}
+.relief-page-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr);
+  gap:48px;
+  align-items:start;
+}
+.relief-steps{display:grid;gap:14px;margin-top:28px}
+.relief-steps article{
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:16px;
+  align-items:start;
+  padding:18px 20px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+.relief-steps article > span{
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--vfw-red);
+  color:#fff;
+  font-weight:900;
+}
+.relief-steps h3{margin:0 0 5px;font-size:1.15rem}
+.relief-steps p{margin:0;color:var(--muted)}
+.relief-page-panel{
+  position:sticky;
+  top:128px;
+  background:linear-gradient(145deg,#101e33,#172b49);
+  color:#fff;
+  border-radius:24px;
+  padding:32px;
+  box-shadow:var(--shadow);
+}
+.relief-page-panel img{
+  width:105px;
+  height:105px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid rgba(255,255,255,.9);
+  margin-bottom:22px;
+}
+.relief-page-panel h2{
+  margin:6px 0 18px;
+  font-size:2rem;
+}
+.relief-page-panel ul{padding-left:20px;margin:0 0 24px}
+.relief-page-panel li{margin:12px 0;color:#dfe6ef}
+.relief-full-button{width:100%}
+.emergency-notice{
+  display:grid;
+  grid-template-columns:58px 1fr;
+  gap:22px;
+  align-items:start;
+  background:#fff;
+  border:1px solid #e2c6c6;
+  border-left:6px solid var(--vfw-red);
+  border-radius:18px;
+  padding:26px;
+}
+.emergency-icon{
+  display:grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:var(--vfw-red);
+  color:#fff;
+  font-size:1.7rem;
+  font-weight:900;
+}
+.emergency-notice h2{margin:0 0 8px}
+.emergency-notice p{margin:0 0 16px;color:#4d5663}
+.relief-final-cta{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:center;
+}
+.relief-final-cta h2{
+  margin:4px 0 8px;
+  font-size:clamp(2rem,4vw,3.2rem);
+}
+.relief-final-cta p{margin:0;color:#d4dbe5;max-width:760px}
+.directions-action{margin:14px 0 22px}
+.relief-contact-callout{
+  margin:-2px 0 22px;
+  padding:14px 16px;
+  border-left:4px solid var(--vfw-gold);
+  border-radius:0 10px 10px 0;
+  background:#f7f2e5;
+  color:#4d4736;
+}
+.relief-contact-callout a{font-weight:800;color:var(--vfw-red-dark)}
+.accessibility-wrap{max-width:900px}
+.accessibility-wrap h2{font-size:clamp(2rem,4vw,3rem)}
+.accessibility-contact-card{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin:24px 0 34px;
+}
+.accessibility-contact-card p{
+  margin:0;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--cream);
+}
+.accessibility-contact-card a{font-weight:800;color:var(--vfw-red-dark)}
+#main-content:focus{outline:none}
+
+@media(max-width:900px){
+  .relief-page-grid{grid-template-columns:1fr}
+  .relief-page-panel{position:static}
+  .accessibility-contact-card{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .relief-final-cta{display:block}
+  .relief-final-cta .btn{margin-top:20px}
+  .emergency-notice{grid-template-columns:1fr}
+}

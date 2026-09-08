@@ -281,3 +281,33 @@ Placement:
 - Programs page, as the first listed program
 - Homepage Veteran Support card
 - Site-wide footer under Explore
+
+## v35 — Veteran Relief, Directions & Accessibility
+Implemented all remaining recommended site improvements:
+
+1. Dedicated `/veteran-relief.html`
+   - Explains the request process and $300 committee authority
+   - Explains Post approval for requests above $300
+   - Explains direct-to-vendor payment
+   - Explains available-funds limitation and no guarantee of funding
+   - Links directly to the existing Jotform: https://www.jotform.com/242946228301050
+   - Includes a clear non-emergency notice and Veterans Crisis Line information
+
+2. Contact-page directions
+   - Added a prominent "Get Directions to the Post" button for the physical address
+   - Uses 46 W 145th St South, Glenpool, OK 74033
+   - Keeps the separate mailing address unchanged
+
+3. Accessibility
+   - Added `/accessibility.html`
+   - Added a site-wide Accessibility footer link
+   - Added contact information for reporting accessibility barriers
+   - Clarified third-party service accessibility
+   - Repaired skip-link targets across site pages
+
+4. Routing polish
+   - Homepage Veteran Support now links to the dedicated Veteran Relief page
+   - Programs page links to both the dedicated page and request form
+   - Footer Veteran Relief link now points to the dedicated page
+   - Contact page directs financial-assistance inquiries to the Veteran Relief process
+   - Sitemap updated for both new pages
