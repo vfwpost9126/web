@@ -262,3 +262,22 @@ The Gaming logo now:
 - Uses height:auto
 - Uses object-fit:contain
 - Has responsive max sizing on desktop and mobile
+
+## v34 — Veteran Relief Assistance
+Added the Post 9126 Veteran Relief program to the site.
+
+Program details shown on the site:
+- Veteran Relief Committee may approve up to $300.
+- Requests above $300 go to the Post membership for consideration at the next regular meeting.
+- Approved funds are paid directly to the vendor/company/landlord/utility/creditor or other party owed, not to the applicant.
+- Applicants use the existing Jotform request process and provide proof of veteran status and supporting documentation.
+- Assistance is subject to review and available Veteran Relief funds.
+- Submission does not guarantee approval or funding.
+
+Request form:
+https://www.jotform.com/242946228301050
+
+Placement:
+- Programs page, as the first listed program
+- Homepage Veteran Support card
+- Site-wide footer under Explore
