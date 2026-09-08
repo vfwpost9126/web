@@ -127,7 +127,7 @@ button,input,select,textarea{font-family:var(--font-body)}
 .feature.gaming .feature-logo{width:170px}
 .feature.santa{background:linear-gradient(135deg,#fff7f4,#f2e3df)}
 .branch-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;align-items:center}
-.branch-grid img{width:100%;filter:drop-shadow(0 8px 15px rgba(0,0,0,.12));transition:.2s transform}
+.branch-grid img{width:100%;height:auto;max-width:150px;aspect-ratio:1/1;object-fit:contain;justify-self:center;filter:drop-shadow(0 8px 15px rgba(0,0,0,.12));transition:.2s transform}
 .branch-grid img:hover{transform:translateY(-4px)}
 .events-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px}
 .event-list{display:grid;gap:12px}
@@ -970,4 +970,10 @@ button,input,select,textarea{font-family:var(--font-body)}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+
+
+/* v30 latest member-photo hero crop */
+.hero-photo{
+  object-position:center 62%;
 }

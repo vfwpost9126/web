@@ -229,3 +229,19 @@ Events-page card now:
 - Describes statewide news, programs, resources, leadership and Department updates
 - Uses the button "Visit Oklahoma VFW"
 - Links to https://vfwoklahoma.org/
+
+## v30 — Latest Member Photo
+Replaced the homepage hero member photo with the most recent VFW Post 9126
+member group photo supplied by the Post. The image was optimized to WebP and
+the hero crop was tuned for the taller composition.
+
+## v31 — Service Branch Logo Fix
+Corrected the military branch emblem sizing on the homepage. The explicit
+HTML image dimensions added during the final optimization pass were allowing
+the emblems to stretch vertically once CSS changed their width.
+
+The branch emblems now:
+- Preserve their square aspect ratio
+- Use height:auto
+- Use object-fit:contain
+- Stay centered with a consistent maximum size
