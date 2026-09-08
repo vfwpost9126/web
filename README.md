@@ -182,3 +182,7 @@ Reworked the Events page for a cleaner visual hierarchy:
 - The upcoming-events agenda is shorter so it does not dominate the page.
 - The Monthly Calendar now spans the full page width underneath.
 - Responsive behavior keeps the layout readable on tablets and phones.
+
+
+## v24 Full Audit + Typography Refresh
+Performed a site-wide consistency and technical audit. Updated typography to a more distinctive, no-third-party-request font stack, fixed stale placeholder text, corrected a CSS variable issue, improved scholarship heading styling, added page-specific metadata and favicon support, improved mobile-nav accessibility, and corrected the locally hosted Termly postal address to the Post mailing address. See AUDIT.md for details.
