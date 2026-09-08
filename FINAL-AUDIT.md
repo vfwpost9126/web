@@ -58,3 +58,8 @@ no JavaScript syntax errors.
 ## v39 Motto Correction
 - Corrected the established Post phrase everywhere to **“Honoring The Past. Embracing The Future.”**
 - No routing, form, privacy, consent, or integration behavior changed.
+
+## v40 Mobile Layout Fix
+- Fixed the Guitars for Vets stacked-photo treatment on narrow mobile screens.
+- Removed the mobile negative-margin overlap that could cover the first photo caption.
+- Desktop and tablet styling is unchanged.

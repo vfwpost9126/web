@@ -4,7 +4,7 @@ Cloudflare Workers Static Assets deployment.
 
 ## Current Site Notes
 
-- Current production version: **v39**
+- Current production version: **v40**
 - Production site: **https://vfw9126.org**
 - Static HTML/CSS/JavaScript site with deployable files under `/public`
 - Hosted with **Cloudflare Workers Static Assets**
@@ -57,7 +57,7 @@ Cloudflare Workers Static Assets deployment.
 For each meaningful production change, add a new sequential version section using this format:
 
 ```text
-## v40 — Short Change Name
+## v41 — Short Change Name
 
 Brief summary of the work.
 
@@ -466,3 +466,14 @@ Key changes:
 - About page and site-wide footer now use the correct phrase.
 - Homepage metadata and structured data slogan were corrected.
 - README maintenance guidance now preserves the exact established phrase.
+
+## v40 — Mobile Program Photo Stack Fix
+
+Corrected the overlapping Guitars for Vets photo cards on narrow mobile screens.
+
+Key changes:
+- Removed the negative-margin overlap from the secondary G4V graduation photo on screens 700px and narrower.
+- Mobile program photos now stack vertically with clear spacing.
+- Secondary photo uses the full available width on mobile.
+- Both photo captions remain fully visible instead of one card covering the other.
+- Desktop/tablet overlapping presentation remains unchanged.
