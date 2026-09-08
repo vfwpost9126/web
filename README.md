@@ -316,3 +316,26 @@ Implemented all remaining recommended site improvements:
    - Footer Veteran Relief link now points to the dedicated page
    - Contact page directs financial-assistance inquiries to the Veteran Relief process
    - Sitemap updated for both new pages
+
+## v36 — VA Disability & Benefits Assistance
+Added a new veteran-support pathway for VA disability claims, appeals, benefits
+questions, and related assistance.
+
+Key changes:
+- Added dedicated `/veteran-benefits.html`.
+- Site language focuses on helping veterans connect with an appropriate resource
+  based on their individual situation.
+- No public referral names are listed.
+- The site does not state or imply that Post 9126 has a designated Service Officer.
+- Added privacy guidance telling veterans not to submit Social Security numbers,
+  VA claim numbers, medical records, passwords, or other sensitive information
+  through the website contact form.
+- Homepage Veteran Support card now links to both Veteran Relief and VA Benefits Help.
+- Programs page now includes VA Disability & Benefits Assistance directly after
+  Veteran Relief.
+- Contact form now separates "Veteran Relief / Financial Assistance" from
+  "VA Disability / Benefits Assistance".
+- Benefits-page contact buttons preselect the VA benefits reason on the contact form.
+- Veteran Relief page cross-links veterans who actually need disability/benefits help.
+- Added "VA Benefits Help" to the site-wide footer.
+- Added the new page to the sitemap.

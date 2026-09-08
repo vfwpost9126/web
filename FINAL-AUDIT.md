@@ -22,3 +22,10 @@ No static issues found in the final pass.
 - Added Accessibility Statement and site-wide footer link.
 - Repaired skip-link target IDs across all HTML pages.
 - Added new pages to sitemap.
+
+## v36 Follow-up
+- Added dedicated VA Disability & Benefits Assistance page.
+- Added separate financial-relief and VA-benefits contact pathways.
+- Added privacy warning for sensitive claim/personal information.
+- Added homepage, Programs, Veteran Relief, footer, sitemap, and contact-form routing.
+- No public referral contacts or claim representatives are named.

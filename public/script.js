@@ -40,3 +40,22 @@ document.querySelectorAll('.nav a').forEach(a => {
     a.setAttribute('aria-current', 'page');
   }
 });
+
+
+// v36: Preselect the contact-form reason when a page links to
+// contact.html?reason=<matching option text>.
+(() => {
+  const reasonSelect = document.querySelector('#reason');
+  if (!reasonSelect) return;
+
+  const requestedReason = new URLSearchParams(window.location.search).get('reason');
+  if (!requestedReason) return;
+
+  const matchingOption = Array.from(reasonSelect.options).find(
+    option => option.text.trim() === requestedReason || option.value === requestedReason
+  );
+
+  if (matchingOption) {
+    reasonSelect.value = matchingOption.value;
+  }
+})();
