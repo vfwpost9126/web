@@ -45,3 +45,14 @@ Added Termly's permanent consent-preferences link to every page footer:
 
 Visitors can use it at any time to reopen the Termly preference center and
 change their cookie choices.
+
+## Donations / Zeffy
+Added `/public/donate.html` and embedded the Zeffy donation campaign:
+https://www.zeffy.com/en-US/donation-form/support-local-veterans-through-vfw-post--9126
+
+The navigation now includes a gold Donate button, the footer includes Donate,
+and the homepage hero includes a Donate CTA.
+
+The embed uses Zeffy's documented v2 embed structure and includes a direct-link
+fallback. After deployment, verify the embed against the Zeffy dashboard's
+Campaign > Share > More ways to share > Embed code.
