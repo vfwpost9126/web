@@ -245,3 +245,20 @@ The branch emblems now:
 - Use height:auto
 - Use object-fit:contain
 - Stay centered with a consistent maximum size
+
+## v32 — About Photo + Footer Repair
+- Updated the About page's main photo to the newer group image showing Post 9126 members with community partners and a service dog.
+- Updated About-page social preview metadata to use the same photo.
+- Replaced the footer's oversized generic VFW wordmark with the circular Post 9126 logo.
+- Rebalanced footer columns, spacing, link rhythm, and responsive behavior.
+- Fixed footer logo proportions by explicitly using a square object-fit treatment.
+
+## v33 — Gaming Logo Fix
+Corrected the Gaming Community logo distortion caused by HTML image dimensions
+remaining active while only the image width was being overridden.
+
+The Gaming logo now:
+- Preserves its 1:1 aspect ratio
+- Uses height:auto
+- Uses object-fit:contain
+- Has responsive max sizing on desktop and mobile
