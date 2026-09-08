@@ -371,3 +371,49 @@ a{color:inherit}
   .calendar-frame,.calendar-frame iframe{min-height:620px;height:620px}
   .calendar-side{grid-template-columns:1fr}
 }
+
+
+/* Readable agenda list beneath monthly calendar */
+.agenda-card{
+  margin-top:28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.agenda-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:26px 30px;
+  border-bottom:1px solid var(--line);
+}
+.agenda-card-head h2{
+  margin:4px 0 6px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.8rem,3vw,2.45rem);
+  line-height:1.1;
+}
+.agenda-card-head p{
+  margin:0;
+  max-width:700px;
+  color:var(--muted);
+}
+.agenda-frame{
+  width:100%;
+  min-height:430px;
+  background:#fff;
+}
+.agenda-frame iframe{
+  display:block;
+  width:100%;
+  height:430px;
+  border:0;
+}
+@media(max-width:700px){
+  .agenda-card-head{display:block;padding:22px 20px}
+  .agenda-card-head .btn{margin-top:16px}
+  .agenda-frame,.agenda-frame iframe{min-height:500px;height:500px}
+}

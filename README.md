@@ -108,3 +108,54 @@ the oversized generic VFW wordmark. The accompanying identity now reads
 Header spacing and logo sizing were tightened so the local Post identity feels
 intentional while preserving room for the existing navigation, Donate button,
 and Join the VFW button.
+
+## Events Page: Upcoming Events List
+Kept the Google Calendar in Month view and added a second, shorter Google
+Calendar Agenda view directly beneath it. This gives visitors an at-a-glance
+monthly calendar plus a more readable list of upcoming event names, dates,
+and times.
+
+The agenda section is responsive and includes a direct link to the full
+Google Calendar.
+
+## Gaming Discord
+Added the Post 9126 Gaming Community Discord invite:
+https://discord.gg/PSAdURVZNG
+
+Placement:
+- Prominent "Join the Discord" button in the Gaming page introduction
+- Second Discord button in the Gaming page Discord card
+- Homepage Gaming feature button
+- "Gaming Discord" link in the site-wide footer Connect section
+
+The main navigation remains unchanged to avoid crowding the header.
+
+## Monthly Meeting Potluck
+Updated recurring monthly meeting information to note:
+- Potluck at 5:00 PM
+- Post meeting at 5:30 PM
+- Third Sunday of each month
+
+## Monthly Meeting Potluck Correction
+Updated all remaining meeting references so they consistently show:
+- Potluck at 5:00 PM
+- Monthly Post meeting at 5:30 PM
+- Third Sunday of each month
+
+## Address Clarification
+Updated Post address information to distinguish:
+- Physical address: 46 W 145th St South, Glenpool, OK 74033
+- Mailing address: 14348 S Broadway St, Glenpool, OK 74033
+
+The physical address remains the location visitors should use to come to the Post.
+
+## Address Cleanup
+Clarified the Post's two addresses:
+- Physical/Post location: 46 W 145th St South, Glenpool, OK 74033
+- Mailing address: 14348 S Broadway St, Glenpool, OK 74033
+
+The Contact page now shows each address once, clearly labeled. Site footers now label
+46 W 145th St South as the Post location so visitors do not mistake it for the mailing address.
+
+The Contact page monthly meeting information also now includes the 5:00 PM potluck before
+the 5:30 PM meeting.
