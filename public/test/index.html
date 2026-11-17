@@ -1,88 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta name="theme-color" content="#111f33">
-  <title>Website Preview | VFW Post 9126</title>
-  <meta name="description" content="Private review workspace for proposed VFW Post 9126 website updates.">
-  <link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    :root { color-scheme: light; }
-    body { margin: 0; background: #f2f4f7; color: #18253b; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .pv-top { height: 7px; background: linear-gradient(90deg,#a52337 0 33%,#e4b961 33% 66%,#182d4c 66%); }
-    .pv-header { background:#111f33; color:#fff; border-bottom:1px solid rgba(255,255,255,.12); }
-    .pv-container { width:min(1100px, calc(100% - 40px)); margin:0 auto; }
-    .pv-bar { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:18px 0; flex-wrap:wrap; }
-    .pv-brand { display:flex; align-items:center; gap:14px; text-decoration:none; color:#fff; }
-    .pv-brand img { width:62px; height:62px; object-fit:contain; border-radius:50%; background:#fff; padding:3px; }
-    .pv-brand strong { display:block; font-size:1.17rem; }
-    .pv-brand small { color:#d4dce8; }
-    .pv-pill { border:1px solid #efca87; color:#f7ddae; background:rgba(221,171,92,.10); border-radius:999px; padding:7px 13px; font-size:.84rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
-    .pv-hero { padding:80px 0 50px; background:linear-gradient(150deg,#111f33,#213a5f); color:#fff; }
-    .pv-kicker { color:#f3ca83; text-transform:uppercase; letter-spacing:.14em; font-weight:750; font-size:.82rem; }
-    .pv-hero h1 { max-width:830px; margin:18px 0; color:#fff; font-size:clamp(2.4rem,6vw,4.4rem); line-height:1.08; }
-    .pv-hero p { max-width:700px; color:#e3e8f0; font-size:1.14rem; line-height:1.7; }
-    .pv-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
-    .pv-btn { display:inline-block; padding:13px 20px; border-radius:8px; text-decoration:none; font-weight:750; background:#eabf77; color:#18253b; transition:transform .15s ease; }
-    .pv-btn:hover { transform:translateY(-2px); }
-    .pv-btn-alt { background:transparent; color:#fff; border:1px solid #bec9d8; }
-    .pv-main { padding:48px 0 70px; }
-    .pv-main h2 { font-size:1.8rem; color:#111f33; margin:0 0 9px; }
-    .pv-intro { color:#58657a; margin:0 0 26px; }
-    .pv-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:17px; }
-    .pv-card { background:#fff; border:1px solid #dbe0e8; box-shadow:0 5px 22px rgba(13,29,52,.05); border-radius:12px; padding:23px; display:flex; flex-direction:column; gap:9px; }
-    .pv-card h3 { color:#142744; margin:0; font-size:1.14rem; }
-    .pv-card p { color:#536074; line-height:1.55; margin:0; flex:1; }
-    .pv-card a { font-weight:750; text-decoration:none; color:#a12339; margin-top:10px; }
-    .pv-info { background:#fff9eb; border-left:4px solid #d5a553; border-radius:7px; padding:18px 21px; margin-top:30px; color:#314054; line-height:1.6; }
-    .pv-footer { background:#111f33; color:#dce2ec; padding:24px 0; font-size:.94rem; }
-    .pv-footer a {color:#f5d096}
-    @media(max-width:800px){ .pv-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .pv-hero{padding:58px 0 42px} }
-    @media(max-width:560px){ .pv-grid{grid-template-columns:1fr} .pv-brand img{width:49px;height:49px} .pv-bar{align-items:flex-start} }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#111f33">
+<title>Website Review Center | VFW Post 9126 (TEST)</title>
+<meta name="description" content="Working preview and page review dashboard for the VFW Post 9126 website.">
+<link rel="icon" href="/assets/favicon-32x32.png" type="image/png">
+<style>
+:root{color-scheme:light;--navy:#111f33;--navy2:#213a5f;--gold:#d2aa60;--pale:#f7f5ee;--ink:#26313d;--line:#dadeda;--paper:#fff;--muted:#687482}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#f3f4f2;line-height:1.55}
+a{color:inherit}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #bd8f37;outline-offset:3px}
+.topbar{background:var(--navy);color:white;border-bottom:5px solid var(--gold);padding:15px clamp(18px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:54px;height:54px;object-fit:contain;border-radius:50%;border:1px solid #ffffff50;background:white;padding:2px}.brand strong{font-family:Georgia,Cambria,serif;font-size:21px;letter-spacing:.02em}.brand small{display:block;font-size:11px;letter-spacing:.12em;color:#e3d1a1}
+.preview-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#d4ac59;color:#1a2430;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.preview-badge::before{content:"";width:8px;height:8px;background:#243e3b;border-radius:50%}
+.page{width:min(1450px,calc(100% - 32px));margin:30px auto 55px}.intro{display:flex;justify-content:space-between;align-items:flex-start;gap:22px;flex-wrap:wrap;margin-bottom:22px}.eyebrow{color:#805f23;text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:800}.intro h1{font-family:Georgia,Cambria,serif;font-size:clamp(29px,3vw,46px);color:var(--navy);margin:6px 0 7px;line-height:1.12}.intro p{margin:0;color:#586675;max-width:750px}.intro-links{display:flex;gap:10px;flex-wrap:wrap;padding-top:11px}.outline-link{padding:10px 15px;background:white;color:var(--navy);text-decoration:none;border:1px solid #bec8cc;border-radius:8px;font-size:14px;font-weight:700}.outline-link:hover{background:#fef7e6;border-color:#ae8b48}
+.notice{display:flex;gap:13px;padding:15px 17px;background:#fcf8e8;border:1px solid #e8d7a9;border-left:4px solid #c59a41;border-radius:9px;margin-bottom:20px}.notice strong{color:#634819}.notice p{margin:0;font-size:14px}.notice .symbol{font-weight:800;font-size:22px;color:#956f24}
+.workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:17px;align-items:start}.sidebar,.preview-panel{background:white;border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 15px #1727370b;overflow:hidden}.sidebar{padding:20px}.sidebar h2{font-family:Georgia,Cambria,serif;font-size:20px;color:var(--navy);margin:0 0 3px}.sidebar p{font-size:12px;color:var(--muted);margin:0 0 16px}.section-title{color:#7c6b43;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:22px 0 7px}.page-menu{display:flex;flex-direction:column;gap:4px}.page-link{border:1px solid transparent;background:transparent;text-align:left;width:100%;padding:10px 12px;border-radius:8px;color:#344a5d;font-weight:650;font-size:14px}.page-link:hover{background:#f1f4f5}.page-link.active{background:#f5edda;border-color:#e6d2a6;color:#634a1d}.mini-note{font-size:12px;color:#657280;border-top:1px solid #e1e7e6;padding-top:16px;margin-top:20px}
+.toolbar{padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--line)}.toolbar h2{color:var(--navy);font-size:19px;margin:0}.toolbar small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.control-group{display:flex;gap:6px;flex-wrap:wrap}.control-group button{border:1px solid #bec8ce;padding:9px 12px;background:#fff;color:#30485b;border-radius:7px;font-size:12px;font-weight:800}.control-group button[aria-pressed="true"]{background:var(--navy);color:white;border-color:var(--navy)}.control-group button:hover{border-color:#b08d45}
+.stage{background:#dfe5e7;padding:22px 12px 26px;overflow:auto;text-align:center;min-height:380px}.device{margin:0 auto;transition:width .25s ease;max-width:100%;width:100%;background:#fff;border-radius:5px;border:1px solid #9caeb8;box-shadow:0 12px 30px #2136422b;overflow:hidden;text-align:left}.device iframe{border:0;width:100%;display:block;height:780px;background:white}.device.tablet{width:768px}.device.mobile{width:390px}.device.mobile iframe{height:720px}.stage-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:14px 20px;background:white}.stage-footer p{font-size:12px;color:var(--muted);margin:0}.stage-footer a{font-size:13px;text-decoration:none;font-weight:800;color:#235173}.stage-footer a:hover{text-decoration:underline}
+.bottom{margin-top:22px;padding:18px 20px;background:white;border:1px solid var(--line);border-radius:11px}.bottom h2{font-family:Georgia,Cambria,serif;font-size:22px;margin:0 0 5px;color:var(--navy)}.bottom p{font-size:14px;color:#586675;margin:0}.footer{font-size:12px;text-align:center;color:#79838b;padding-top:22px}
+@media(max-width:970px){.workspace{grid-template-columns:1fr}.sidebar{padding:15px}.page-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}.section-title{margin:15px 0 6px}.device iframe{height:680px}}@media(max-width:540px){.page{width:calc(100% - 20px);margin-top:19px}.topbar{padding:12px 13px}.brand img{height:43px;width:43px}.brand strong{font-size:16px}.brand small{font-size:9px}.preview-badge{font-size:10px}.sidebar h2{font-size:19px}.stage{padding:11px 5px}.toolbar{padding:13px}.control-group button{padding:8px 9px}.device iframe{height:600px}}
+</style>
 </head>
 <body>
-  <div class="pv-top" aria-hidden="true"></div>
-  <header class="pv-header">
-    <div class="pv-container pv-bar">
-      <a class="pv-brand" href="/" aria-label="VFW Post 9126 preview home">
-        <img src="/assets/post-9126-logo.jpg" alt="VFW Post 9126 logo">
-        <span><strong>VFW Post 9126</strong><small>Glenpool, Oklahoma</small></span>
-      </a>
-      <span class="pv-pill">Preview · Not Live</span>
-    </div>
-  </header>
-  <main>
-    <section class="pv-hero">
-      <div class="pv-container">
-        <div class="pv-kicker">Website Review Workspace</div>
-        <h1>Honoring The Past.<br>Embracing The Future.</h1>
-        <p>This is the testing area for VFW Post 9126 website changes. Explore the pages below, review updates, and approve them before they're added to the live website.</p>
-        <div class="pv-actions">
-          <a class="pv-btn" href="/">Explore the Preview Site</a>
-          <a class="pv-btn pv-btn-alt" href="https://vfw9126.org/" target="_blank" rel="noopener noreferrer">Compare With Live Site</a>
-        </div>
-      </div>
-    </section>
-    <section class="pv-main" aria-labelledby="pv-pages">
-      <div class="pv-container">
-        <h2 id="pv-pages">Review Website Pages</h2>
-        <p class="pv-intro">These links stay in the preview environment so you can test the full site before publishing changes.</p>
-        <div class="pv-grid">
-          <article class="pv-card"><h3>Home</h3><p>Review the homepage, announcements, photography, and key calls to action.</p><a href="/">Open Home →</a></article>
-          <article class="pv-card"><h3>Programs</h3><p>Explore veteran programs, community outreach, and Guitars for Vets information.</p><a href="/programs">Open Programs →</a></article>
-          <article class="pv-card"><h3>Events</h3><p>Review meeting details, community events, and calendar information.</p><a href="/events">Open Events →</a></article>
-          <article class="pv-card"><h3>Gaming Community</h3><p>Check the gaming program, community messaging, and Discord links.</p><a href="/gaming">Open Gaming →</a></article>
-          <article class="pv-card"><h3>Officers</h3><p>Review Post leadership information and updates before publication.</p><a href="/officers">Open Officers →</a></article>
-          <article class="pv-card"><h3>Membership</h3><p>Check membership details and how veterans can join the Post.</p><a href="/membership">Open Membership →</a></article>
-        </div>
-        <aside class="pv-info"><strong>Review only:</strong> This page is intended for the <code>preview</code> branch and preview Worker deployment. Publishing approved changes to <code>main</code> is a separate step. Contact forms, payments, and third-party embeds may still connect to live services: do not submit test data through them.</aside>
-      </div>
-    </section>
-  </main>
-  <footer class="pv-footer"><div class="pv-container">VFW Post 9126 · Glenpool, Oklahoma · <a href="https://vfw9126.org/">Production Website</a></div></footer>
-</body>
-</html>
+<header class="topbar"><a class="brand" href="/" aria-label="Open preview homepage"><img src="/assets/post-9126-logo.jpg" alt="VFW Post 9126 circular logo" width="54" height="54"><span><strong>VFW Post 9126</strong><small>HONORING THE PAST. EMBRACING THE FUTURE.</small></span></a><span class="preview-badge">Test Site · Not Production</span></header>
+<main class="page">
+<div class="intro"><div><div class="eyebrow">Website Review Center · Preview Branch</div><h1>Review changes before they go live.</h1><p>Browse the VFW Post 9126 preview website, switch between desktop, tablet, and phone sizes, and compare each page to the live site. Proposed changes stay on the preview branch until approved.</p></div><div class="intro-links"><a class="outline-link" href="/" target="_blank" rel="noopener">Open Test Homepage</a><a class="outline-link" href="https://vfw9126.org/" target="_blank" rel="noopener noreferrer">Open Live Website</a></div></div>
+<div class="notice" role="note"><div class="symbol" aria-hidden="true">!</div><p><strong>Important:</strong> This is a test copy. The website's contact forms, assistance applications, donation buttons, and registration links may still connect to real services. Use the review tools without submitting actual information or payments.</p></div>
+<div class="workspace">
+<aside class="sidebar" aria-label="Page selector"><h2>Pages to review</h2><p>Choose any page to load inside the preview.</p>
+<div class="section-title">About the Post</div><nav class="page-menu" aria-label="Post pages">
+<button class="page-link active" data-path="/" data-live="/" data-label="Homepage" aria-current="page">Homepage</button>
+<button class="page-link" data-path="/about" data-live="/about" data-label="About Us">About Us</button>
+<button class="page-link" data-path="/officers" data-live="/officers" data-label="Post Officers">Post Officers</button>
+<button class="page-link" data-path="/membership" data-live="/membership" data-label="Membership">Membership</button>
+</nav><div class="section-title">Programs and Support</div><nav class="page-menu" aria-label="Support pages">
+<button class="page-link" data-path="/programs" data-live="/programs" data-label="Programs">Programs</button>
+<button class="page-link" data-path="/veteran-relief" data-live="/veteran-relief" data-label="Veteran Relief">Veteran Relief</button>
+<button class="page-link" data-path="/veteran-benefits" data-live="/veteran-benefits" data-label="VA Benefits Assistance">VA Benefits Assistance</button>
+<button class="page-link" data-path="/scholarships" data-live="/scholarships" data-label="Scholarships">Scholarships</button>
+</nav><div class="section-title">Events and Community</div><nav class="page-menu" aria-label="Community pages">
+<button class="page-link" data-path="/events" data-live="/events" data-label="Events">Events</button>
+<button class="page-link" data-path="/gaming" data-live="/gaming" data-label="Gaming Community">Gaming Community</button>
+</nav><div class="section-title">Connect and Give</div><nav class="page-menu" aria-label="Contact and giving pages">
+<button class="page-link" data-path="/contact" data-live="/contact" data-label="Contact Us">Contact Us</button>
+<button class="page-link" data-path="/donate" data-live="/donate" data-label="Donate">Donate</button>
+</nav><p class="mini-note">Use this page to review proposed edits. Preview changes do not publish to the live Post website automatically.</p></aside>
+<section class="preview-panel" aria-label="Visual page preview"><div class="toolbar"><div><h2 id="page-title">Homepage</h2><small id="page-path">Test page · /</small></div><div class="control-group" role="group" aria-label="Preview screen size"><button type="button" data-size="desktop" aria-pressed="true">Desktop</button><button type="button" data-size="tablet" aria-pressed="false">Tablet</button><button type="button" data-size="mobile" aria-pressed="false">Phone</button></div></div>
+<div class="stage"><div class="device desktop" id="device"><iframe id="preview-frame" src="/" title="Website preview — Homepage" loading="eager"></iframe></div></div>
+<div class="stage-footer"><p>Page appearance may differ slightly on your actual device.</p><div><a id="open-full" target="_blank" rel="noopener" href="/">Open test page ↗</a><span aria-hidden="true"> &nbsp; · &nbsp; </span><a id="open-live" target="_blank" rel="noopener noreferrer" href="https://vfw9126.org/">Compare live ↗</a></div></div>
+</section></div>
+<section class="bottom"><h2>How we'll use this test site</h2><p>We will make future design and content changes on the <code>preview</code> branch first. Review them here, request edits, and only publish approved changes to the production <code>main</code> branch.</p></section><div class="footer">VFW Post 9126 · Working review copy · Glenpool, Oklahoma · Not an official application or donation page</div>
+</main>
+<script>
+(()=>{
+const frame=document.getElementById('preview-frame'),title=document.getElementById('page-title'),route=document.getElementById('page-path'),openFull=document.getElementById('open-full'),openLive=document.getElementById('open-live'),device=document.getElementById('device');
+document.querySelectorAll('button[data-path]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('button[data-path]').forEach(b=>{b.classList.remove('active');b.removeAttribute('aria-current')});button.classList.add('active');button.setAttribute('aria-current','page');
+  const p=button.dataset.path,live=button.dataset.live;frame.src=p;frame.title='Website preview — '+button.dataset.label;title.textContent=button.dataset.label;route.textContent='Test page · '+live;openFull.href=p;openLive.href='https://vfw9126.org'+live;
+}));
+document.querySelectorAll('button[data-size]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('button[data-size]').forEach(b=>b.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');device.className='device '+button.dataset.size;
+}));
+})();
+</script>
+</body></html>
