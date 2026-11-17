@@ -22,13 +22,90 @@ a{color:inherit}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-
 .stage{background:#dfe5e7;padding:22px 12px 26px;overflow:auto;text-align:center;min-height:380px}.device{margin:0 auto;transition:width .25s ease;max-width:100%;width:100%;background:#fff;border-radius:5px;border:1px solid #9caeb8;box-shadow:0 12px 30px #2136422b;overflow:hidden;text-align:left}.device iframe{border:0;width:100%;display:block;height:780px;background:white}.device.tablet{width:768px}.device.mobile{width:390px}.device.mobile iframe{height:720px}.stage-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:14px 20px;background:white}.stage-footer p{font-size:12px;color:var(--muted);margin:0}.stage-footer a{font-size:13px;text-decoration:none;font-weight:800;color:#235173}.stage-footer a:hover{text-decoration:underline}
 .bottom{margin-top:22px;padding:18px 20px;background:white;border:1px solid var(--line);border-radius:11px}.bottom h2{font-family:Georgia,Cambria,serif;font-size:22px;margin:0 0 5px;color:var(--navy)}.bottom p{font-size:14px;color:#586675;margin:0}.footer{font-size:12px;text-align:center;color:#79838b;padding-top:22px}
 @media(max-width:970px){.workspace{grid-template-columns:1fr}.sidebar{padding:15px}.page-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}.section-title{margin:15px 0 6px}.device iframe{height:680px}}@media(max-width:540px){.page{width:calc(100% - 20px);margin-top:19px}.topbar{padding:12px 13px}.brand img{height:43px;width:43px}.brand strong{font-size:16px}.brand small{font-size:9px}.preview-badge{font-size:10px}.sidebar h2{font-size:19px}.stage{padding:11px 5px}.toolbar{padding:13px}.control-group button{padding:8px 9px}.device iframe{height:600px}}
+
+/* Preview changelog: visible summary, review status, and source links. */
+.change-log{background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 15px #1727370b;margin-bottom:20px;padding:20px 23px}
+.change-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:17px}
+.change-head h2{font-family:Georgia,Cambria,serif;font-size:24px;color:var(--navy);margin:3px 0 5px}
+.change-head p{font-size:13px;color:#586675;max-width:680px;margin:0}
+.change-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.change-state{background:#f9efd5;border:1px solid #e4c97e;color:#725015;font-size:12px;font-weight:800;border-radius:100px;padding:6px 11px}
+.change-compare{font-size:13px;color:#235173;text-decoration:none;font-weight:750;padding:8px 2px}
+.change-compare:hover{text-decoration:underline}
+.change-entry{border-top:1px solid #e5e9e7;padding:14px 0;display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px}
+.change-entry:first-of-type{border-top:1px solid #e5e9e7}
+.change-date{font-size:12px;color:#687482;font-weight:700;padding-top:3px}
+.change-entry h3{font-size:16px;line-height:1.4;color:var(--navy);margin:0 0 4px}
+.change-entry p{font-size:13px;line-height:1.55;color:#516071;margin:0}
+.change-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.change-tags span{background:#eff3f5;color:#3b5363;padding:3px 8px;border-radius:5px;font-size:11px;font-weight:700}
+.change-history{border-top:1px solid #e5e9e7;margin-top:1px;padding-top:12px}
+.change-history summary{cursor:pointer;color:#235173;font-weight:750;font-size:13px;list-style-position:inside}
+.change-history .change-entry:last-child{padding-bottom:2px}
+.change-note{color:#647282;font-size:12px;line-height:1.5;margin:14px 0 0}
+@media(max-width:560px){.change-log{padding:16px}.change-entry{grid-template-columns:1fr;gap:3px}.change-head h2{font-size:22px}.change-meta{align-items:flex-start}}
 </style>
 </head>
 <body>
 <header class="topbar"><a class="brand" href="/" aria-label="Open preview homepage"><img src="/assets/post-9126-logo.jpg" alt="VFW Post 9126 circular logo" width="54" height="54"><span><strong>VFW Post 9126</strong><small>HONORING THE PAST. EMBRACING THE FUTURE.</small></span></a><span class="preview-badge">Test Site · Not Production</span></header>
 <main class="page">
-<div class="intro"><div><div class="eyebrow">Website Review Center · Preview Branch</div><h1>Review changes before they go live.</h1><p>Browse the VFW Post 9126 preview website, switch between desktop, tablet, and phone sizes, and compare each page to the live site. Proposed changes stay on the preview branch until approved.</p></div><div class="intro-links"><a class="outline-link" href="/" target="_blank" rel="noopener">Open Test Homepage</a><a class="outline-link" href="https://vfw9126.org/" target="_blank" rel="noopener noreferrer">Open Live Website</a></div></div>
+<div class="intro"><div><div class="eyebrow">Website Review Center · Preview Branch</div><h1>Review changes before they go live.</h1><p>Browse the VFW Post 9126 preview website, switch between desktop, tablet, and phone sizes, and compare each page to the live site. Proposed changes stay on the preview branch until approved.</p></div><div class="intro-links"><a class="outline-link" href="#changes">What Changed?</a><a class="outline-link" href="/" target="_blank" rel="noopener">Open Test Homepage</a><a class="outline-link" href="https://vfw9126.org/" target="_blank" rel="noopener noreferrer">Open Live Website</a></div></div>
 <div class="notice" role="note"><div class="symbol" aria-hidden="true">!</div><p><strong>Important:</strong> This is a test copy. The website's contact forms, assistance applications, donation buttons, and registration links may still connect to real services. Use the review tools without submitting actual information or payments.</p></div>
+
+<section class="change-log" id="changes" aria-labelledby="change-log-title">
+  <div class="change-head">
+    <div>
+      <div class="eyebrow">Preview update history</div>
+      <h2 id="change-log-title">What changed?</h2>
+      <p>Changes currently being reviewed before they go live. New preview updates will be added here as they are prepared.</p>
+    </div>
+    <div class="change-meta">
+      <span class="change-state">Preview only · Not published</span>
+      <a class="change-compare" href="https://github.com/vfwpost9126/web/compare/main...preview" target="_blank" rel="noopener noreferrer">View exact GitHub changes ↗</a>
+    </div>
+  </div>
+  <!-- PREVIEW CHANGE LOG: add a new .change-entry here whenever a preview update is prepared.
+       Write a human-readable summary, its affected pages and local date.
+       For exact file-level differences the GitHub comparison link above is authoritative.
+       Do not mark as published until a production deployment is verified. -->
+  <div class="change-entry">
+    <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+    <div>
+      <h3>Added “What Changed?” update history</h3>
+      <p>A visible history now summarizes each update, its affected pages, and whether the changes are still in preview.</p>
+      <div class="change-tags"><span>Review dashboard · /test/</span><span>Preview only</span></div>
+    </div>
+  </div>
+  <div class="change-entry">
+    <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+    <div>
+      <h3>Interactive website review dashboard</h3>
+      <p>Changed the original landing page into a Forged to Serve–style review center with a 12-page selector, Desktop/Tablet/Phone preview, and links to compare each page with production.</p>
+      <div class="change-tags"><span>Review dashboard · /test/</span><span>Preview only</span></div>
+    </div>
+  </div>
+  <details class="change-history">
+    <summary>Show earlier setup changes (2)</summary>
+    <div class="change-entry">
+      <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+      <div>
+        <h3>Configured Cloudflare Worker Previews</h3>
+        <p>Enabled the Worker preview configuration in <code>wrangler.jsonc</code> and connected the <code>preview</code> branch to an isolated preview URL.</p>
+        <div class="change-tags"><span>Deployment configuration</span><span>Preview only</span></div>
+      </div>
+    </div>
+    <div class="change-entry">
+      <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+      <div>
+        <h3>Created the first VFW preview page</h3>
+        <p>Added a branded <code>/test/</code> page to give the Post a dedicated place to review proposed website updates.</p>
+        <div class="change-tags"><span>Review dashboard · /test/</span><span>Preview only</span></div>
+      </div>
+    </div>
+  </details>
+  <p class="change-note">This is a manually maintained summary for reviewers. The GitHub comparison above shows the definitive file-level differences between <code>main</code> and <code>preview</code>. Preview links and forms may still point to live external services.</p>
+</section>
+
 <div class="workspace">
 <aside class="sidebar" aria-label="Page selector"><h2>Pages to review</h2><p>Choose any page to load inside the preview.</p>
 <div class="section-title">About the Post</div><nav class="page-menu" aria-label="Post pages">
