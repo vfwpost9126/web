@@ -52,6 +52,21 @@ Cloudflare Workers Static Assets deployment.
 - Update `sitemap.xml` when adding or removing public pages.
 - Validate internal links and local assets before packaging a release.
 
+## Preview Review Log — Required for Every Website Change
+
+Before committing any website change to the `preview` branch, update the **What Changed?** section of `public/test/index.html`. This is the running review history visible at https://preview-web.vfwpost9126.workers.dev/test/#changes.
+
+For **every** design, content, functionality, navigation, asset, or preview-dashboard change:
+
+1. Add **one new entry at the top** of the `change-log` section (newest first); group closely related edits made in a single update rather than creating duplicate entries.
+2. Include the local calendar **date**, a plain-English title, a summary describing what changed, the **affected page(s)** or files, and the review/publication **status**.
+3. Keep all pending entries labeled **Preview only** until publication to production has been confirmed. Mark reviewed work as approved only after explicit approval, and mark it **Published** only after the production deployment is verified.
+4. Keep previous entries in chronological order so the dashboard preserves a cumulative history, including prior published changes. Move older entries into the expandable history area as needed.
+5. After each change, confirm that the dashboard renders, the affected preview pages work, and the Cloudflare preview build succeeds. Share the preview page and affected page links for review.
+6. Use GitHub's [main vs preview comparison](https://github.com/vfwpost9126/web/compare/main...preview) for definitive file-level differences; the human-readable review log should accurately summarize the changes, not automatically claim to be a complete diff.
+
+Do **not** merge or deploy changes from the `preview` branch to `main` without explicit approval. Keep the production release/version log below separate from the preview review history.
+
 ## Updating This Change Log
 
 For each meaningful production change, add a new sequential version section using this format:
