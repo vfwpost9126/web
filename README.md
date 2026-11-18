@@ -52,6 +52,21 @@ Cloudflare Workers Static Assets deployment.
 - Update `sitemap.xml` when adding or removing public pages.
 - Validate internal links and local assets before packaging a release.
 
+## Preview Review Log — Required for Every Website Change
+
+Before committing any website change to the `preview` branch, update the **What Changed?** section of `public/test/index.html`. This is the running review history visible at https://preview-web.vfwpost9126.workers.dev/test/#changes.
+
+For **every** design, content, functionality, navigation, asset, or preview-dashboard change:
+
+1. Add **one new entry at the top** of the `change-log` section (newest first); group closely related edits made in a single update rather than creating duplicate entries.
+2. Include the local calendar **date**, a plain-English title, a summary describing what changed, the **affected page(s)** or files, and the review/publication **status**.
+3. Keep all pending entries labeled **Preview only** until publication to production has been confirmed. Mark reviewed work as approved only after explicit approval, and mark it **Published** only after the production deployment is verified.
+4. Keep previous entries in chronological order so the dashboard preserves a cumulative history, including prior published changes. Move older entries into the expandable history area as needed.
+5. After each change, confirm that the dashboard renders, the affected preview pages work, and the Cloudflare preview build succeeds. Share the preview page and affected page links for review.
+6. Use GitHub's [main vs preview comparison](https://github.com/vfwpost9126/web/compare/main...preview) for definitive file-level differences; the human-readable review log should accurately summarize the changes, not automatically claim to be a complete diff.
+
+Do **not** merge or deploy changes from the `preview` branch to `main` without explicit approval. Keep the production release/version log below separate from the preview review history.
+
 ## Updating This Change Log
 
 For each meaningful production change, add a new sequential version section using this format:
@@ -488,3 +503,23 @@ Key changes:
 - The band-photo caption “Music, connection and continued camaraderie.” remains visible.
 - The graduation-photo caption remains visible.
 - Desktop and tablet photo presentation remains unchanged.
+
+
+## Website Change, Review, and Release Workflow (shared standard)
+
+This procedure applies to the Dallas Lowry Foundation, Forged to Serve Foundation, and VFW Post 9126 websites. Follow it for every future website change.
+
+1. **Preview first.** Make and deploy proposed website changes on the repository's existing preview branch. Do not modify production until the site owner approves the change. Keep Cloudflare Access protecting the preview site; never apply preview-only authentication to the public site.
+2. **Record the change.** Update the preview website's `/test/` review dashboard **and this README** in the same work cycle. Include the date, plain-language title and description, affected page paths, release version or **Unreleased**, and status (**Needs review**, **Ready**, **Published**, or **Pending**). Add a working link to review the affected page. Keep a chronological record; do not silently remove older entries.
+3. **Consistent review centers.** All three `/test/` dashboards should follow the approved Forged to Serve-style layout: branded header, prominent **TEST SITE · NOT PRODUCTION** label, production-baseline version, **What Changed?** release history, and side-by-side or device-size preview controls where implemented. Preserve each organization's own branding.
+4. **Release versions.** The production-baseline number refers to the version actually published to production, not a pending preview. Display the applicable version **beside each change**. For work not yet released use **Unreleased**; for historical items without reliable version evidence use **Version not recorded**. Do not invent historical version assignments. Keep version numbers synchronized between production documentation and the preview review dashboard.
+5. **Approval and publishing.** Obtain explicit approval before publishing. Promote only approved changes to the production branch, avoiding unrelated preview work. Increment the production release version when publishing an approved release, and mark the associated change **Published** with that release version in the dashboard and README.
+6. **Verify before claiming live.** Check the GitHub commit, Cloudflare deployment result, public production page, and preview dashboard after deployment. Distinguish **committed**, **deployed**, and **verified live** in reports. Never mark a change Published merely because a commit was pushed.
+7. **Protect integrations.** Test forms and email integrations safely. Preview forms, donation links, newsletter signups, and registration links may connect to real services; do not submit real personal data or payments just to check appearance.
+8. **Maintain consistency.** When improving the review workflow or dashboard design on one site, apply the same standard to the other two repositories, while respecting their different build systems and organizational branding.
+
+### Release record format
+
+`YYYY-MM-DD | Version: vX (or Unreleased) | Status: Needs review / Ready / Published / Pending | Pages: /affected-path/ | Summary: ... | Verification: ...`
+
+This README is the persistent operating guide. The review dashboard is the visible change history for reviewers. Both must be maintained together.

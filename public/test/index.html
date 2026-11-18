@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#111f33">
+<title>Website Review Center | VFW Post 9126 (TEST)</title>
+<meta name="description" content="Working preview and page review dashboard for the VFW Post 9126 website.">
+<link rel="icon" href="/assets/favicon-32x32.png" type="image/png">
+<style>
+:root{color-scheme:light;--navy:#111f33;--navy2:#213a5f;--gold:#d2aa60;--pale:#f7f5ee;--ink:#26313d;--line:#dadeda;--paper:#fff;--muted:#687482}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#f3f4f2;line-height:1.55}
+a{color:inherit}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #bd8f37;outline-offset:3px}
+.topbar{background:var(--navy);color:white;border-bottom:5px solid var(--gold);padding:15px clamp(18px,4vw,56px);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:54px;height:54px;object-fit:contain;border-radius:50%;border:1px solid #ffffff50;background:white;padding:2px}.brand strong{font-family:Georgia,Cambria,serif;font-size:21px;letter-spacing:.02em}.brand small{display:block;font-size:11px;letter-spacing:.12em;color:#e3d1a1}
+.preview-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#d4ac59;color:#1a2430;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.preview-badge::before{content:"";width:8px;height:8px;background:#243e3b;border-radius:50%}
+.page{width:min(1450px,calc(100% - 32px));margin:30px auto 55px}.intro{display:flex;justify-content:space-between;align-items:flex-start;gap:22px;flex-wrap:wrap;margin-bottom:22px}.eyebrow{color:#805f23;text-transform:uppercase;letter-spacing:.15em;font-size:12px;font-weight:800}.intro h1{font-family:Georgia,Cambria,serif;font-size:clamp(29px,3vw,46px);color:var(--navy);margin:6px 0 7px;line-height:1.12}.intro p{margin:0;color:#586675;max-width:750px}.intro-links{display:flex;gap:10px;flex-wrap:wrap;padding-top:11px}.outline-link{padding:10px 15px;background:white;color:var(--navy);text-decoration:none;border:1px solid #bec8cc;border-radius:8px;font-size:14px;font-weight:700}.outline-link:hover{background:#fef7e6;border-color:#ae8b48}
+.notice{display:flex;gap:13px;padding:15px 17px;background:#fcf8e8;border:1px solid #e8d7a9;border-left:4px solid #c59a41;border-radius:9px;margin-bottom:20px}.notice strong{color:#634819}.notice p{margin:0;font-size:14px}.notice .symbol{font-weight:800;font-size:22px;color:#956f24}
+.workspace{display:grid;grid-template-columns:260px minmax(0,1fr);gap:17px;align-items:start}.sidebar,.preview-panel{background:white;border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 15px #1727370b;overflow:hidden}.sidebar{padding:20px}.sidebar h2{font-family:Georgia,Cambria,serif;font-size:20px;color:var(--navy);margin:0 0 3px}.sidebar p{font-size:12px;color:var(--muted);margin:0 0 16px}.section-title{color:#7c6b43;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin:22px 0 7px}.page-menu{display:flex;flex-direction:column;gap:4px}.page-link{border:1px solid transparent;background:transparent;text-align:left;width:100%;padding:10px 12px;border-radius:8px;color:#344a5d;font-weight:650;font-size:14px}.page-link:hover{background:#f1f4f5}.page-link.active{background:#f5edda;border-color:#e6d2a6;color:#634a1d}.mini-note{font-size:12px;color:#657280;border-top:1px solid #e1e7e6;padding-top:16px;margin-top:20px}
+.toolbar{padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--line)}.toolbar h2{color:var(--navy);font-size:19px;margin:0}.toolbar small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.control-group{display:flex;gap:6px;flex-wrap:wrap}.control-group button{border:1px solid #bec8ce;padding:9px 12px;background:#fff;color:#30485b;border-radius:7px;font-size:12px;font-weight:800}.control-group button[aria-pressed="true"]{background:var(--navy);color:white;border-color:var(--navy)}.control-group button:hover{border-color:#b08d45}
+.stage{background:#dfe5e7;padding:22px 12px 26px;overflow:auto;text-align:center;min-height:380px}.device{margin:0 auto;transition:width .25s ease;max-width:100%;width:100%;background:#fff;border-radius:5px;border:1px solid #9caeb8;box-shadow:0 12px 30px #2136422b;overflow:hidden;text-align:left}.device iframe{border:0;width:100%;display:block;height:780px;background:white}.device.tablet{width:768px}.device.mobile{width:390px}.device.mobile iframe{height:720px}.stage-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:14px 20px;background:white}.stage-footer p{font-size:12px;color:var(--muted);margin:0}.stage-footer a{font-size:13px;text-decoration:none;font-weight:800;color:#235173}.stage-footer a:hover{text-decoration:underline}
+.bottom{margin-top:22px;padding:18px 20px;background:white;border:1px solid var(--line);border-radius:11px}.bottom h2{font-family:Georgia,Cambria,serif;font-size:22px;margin:0 0 5px;color:var(--navy)}.bottom p{font-size:14px;color:#586675;margin:0}.footer{font-size:12px;text-align:center;color:#79838b;padding-top:22px}
+@media(max-width:970px){.workspace{grid-template-columns:1fr}.sidebar{padding:15px}.page-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}.section-title{margin:15px 0 6px}.device iframe{height:680px}}@media(max-width:540px){.page{width:calc(100% - 20px);margin-top:19px}.topbar{padding:12px 13px}.brand img{height:43px;width:43px}.brand strong{font-size:16px}.brand small{font-size:9px}.preview-badge{font-size:10px}.sidebar h2{font-size:19px}.stage{padding:11px 5px}.toolbar{padding:13px}.control-group button{padding:8px 9px}.device iframe{height:600px}}
+
+/* Preview changelog: visible summary, review status, and source links. */
+.change-log{background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 15px #1727370b;margin-bottom:20px;padding:20px 23px}
+.change-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:17px}
+.change-head h2{font-family:Georgia,Cambria,serif;font-size:24px;color:var(--navy);margin:3px 0 5px}
+.change-head p{font-size:13px;color:#586675;max-width:680px;margin:0}
+.change-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.change-state{background:#f9efd5;border:1px solid #e4c97e;color:#725015;font-size:12px;font-weight:800;border-radius:100px;padding:6px 11px}
+.change-compare{font-size:13px;color:#235173;text-decoration:none;font-weight:750;padding:8px 2px}
+.change-compare:hover{text-decoration:underline}
+.change-entry{border-top:1px solid #e5e9e7;padding:14px 0;display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px}
+.change-entry:first-of-type{border-top:1px solid #e5e9e7}
+.change-date{font-size:12px;color:#687482;font-weight:700;padding-top:3px}
+.version-badge{display:inline-block;vertical-align:middle;margin-left:7px;padding:3px 7px;border-radius:4px;background:#fff1d4;color:#77501b;font:700 11px system-ui;letter-spacing:0}.change-entry h3{font-size:16px;line-height:1.4;color:var(--navy);margin:0 0 4px}
+.change-entry p{font-size:13px;line-height:1.55;color:#516071;margin:0}
+.change-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.change-tags span{background:#eff3f5;color:#3b5363;padding:3px 8px;border-radius:5px;font-size:11px;font-weight:700}
+.change-history{border-top:1px solid #e5e9e7;margin-top:1px;padding-top:12px}
+.change-history summary{cursor:pointer;color:#235173;font-weight:750;font-size:13px;list-style-position:inside}
+.change-history .change-entry:last-child{padding-bottom:2px}
+.change-note{color:#647282;font-size:12px;line-height:1.5;margin:14px 0 0}
+@media(max-width:560px){.change-log{padding:16px}.change-entry{grid-template-columns:1fr;gap:3px}.change-head h2{font-size:22px}.change-meta{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/" aria-label="Open preview homepage"><img src="/assets/post-9126-logo.jpg" alt="VFW Post 9126 circular logo" width="54" height="54"><span><strong>VFW Post 9126</strong><small>HONORING THE PAST. EMBRACING THE FUTURE.</small></span></a><span class="preview-badge">Test Site · Not Production</span></header>
+<main class="page">
+<div class="intro"><div><div class="eyebrow">Website Review Center · v41 Production Baseline</div><h1>Review changes before they go live.</h1><p>Browse the VFW Post 9126 preview website, switch between desktop, tablet, and phone sizes, and compare each page to the live site. Proposed changes stay on the preview branch until approved.</p></div><div class="intro-links"><a class="outline-link" href="#changes">What Changed?</a><a class="outline-link" href="/" target="_blank" rel="noopener">Open Test Homepage</a><a class="outline-link" href="https://vfw9126.org/" target="_blank" rel="noopener noreferrer">Open Live Website</a></div></div>
+<div class="notice" role="note"><div class="symbol" aria-hidden="true">!</div><p><strong>Important:</strong> This is a test copy. The website's contact forms, assistance applications, donation buttons, and registration links may still connect to real services. Use the review tools without submitting actual information or payments.</p></div>
+
+<section class="change-log" id="changes" aria-labelledby="change-log-title">
+  <div class="change-head">
+    <div>
+      <div class="eyebrow">Preview update history</div>
+      <h2 id="change-log-title">What changed?</h2>
+      <p>Changes currently being reviewed before they go live. New preview updates will be added here as they are prepared.</p>
+    </div>
+    <div class="change-meta">
+      <span class="change-state">Preview environment · Published releases and pending changes</span>
+      <a class="change-compare" href="https://github.com/vfwpost9126/web/compare/main...preview" target="_blank" rel="noopener noreferrer">View exact GitHub changes ↗</a>
+    </div>
+  </div>
+  <div class="change-entry"><div class="change-date"><time datetime="2026-11-18">Nov 18, 2026</time></div><div><h3>Page-by-page content improvements <span class="version-badge">Unreleased</span></h3><p>Updated the officer roster, public hours, veteran-first messaging, membership invitation, gaming welcome, scholarship deadline status, benefits resources, contact details, and business donation invitation. Preserved existing branding and layout. Review all twelve pages before any production release.</p><div class="change-tags"><span>Homepage, About, Programs, Events, Gaming, Scholarships</span><span>Officers, Membership, Veteran Relief, Benefits, Contact, Donate</span><span>Preview only · Awaiting review</span></div></div></div>
+  <!-- PREVIEW CHANGE LOG: add a new .change-entry here whenever a preview update is prepared.
+       Write a human-readable summary, its affected pages and local date.
+       For exact file-level differences the GitHub comparison link above is authoritative.
+       Do not mark as published until a production deployment is verified. -->
+  <div class="change-entry">
+    <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+    <div>
+      <h3>Established ongoing review log process <span class="version-badge">Unreleased</span></h3>
+      <p>Every future website update will include a dated, plain-language entry identifying affected pages and what still needs review. This workflow is also documented in the repository README.</p>
+      <div class="change-tags"><span>Review dashboard · /test/</span><span>README.md</span><span>Preview only</span></div>
+    </div>
+  </div>
+  <div class="change-entry">
+    <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+    <div>
+      <h3>Added “What Changed?” update history <span class="version-badge">Unreleased</span></h3>
+      <p>A visible history now summarizes each update, its affected pages, and whether the changes are still in preview.</p>
+      <div class="change-tags"><span>Review dashboard · /test/</span><span>Preview only</span></div>
+    </div>
+  </div>
+  <div class="change-entry">
+    <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+    <div>
+      <h3>Interactive website review dashboard <span class="version-badge">Unreleased</span></h3>
+      <p>Changed the original landing page into a Forged to Serve–style review center with a 12-page selector, Desktop/Tablet/Phone preview, and links to compare each page with production.</p>
+      <div class="change-tags"><span>Review dashboard · /test/</span><span>Preview only</span></div>
+    </div>
+  </div>
+  <details class="change-history" id="full-change-history"><summary>Show older changes and release history (43 entries)</summary><p class="change-note">One continuous history: preview setup updates and past README releases. Labels distinguish preview-only changes from published releases.</p>
+<div class="change-entry">
+      <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+      <div>
+        <h3>Configured Cloudflare Worker Previews <span class="version-badge">Unreleased</span></h3>
+        <p>Enabled the Worker preview configuration in <code>wrangler.jsonc</code> and connected the <code>preview</code> branch to an isolated preview URL.</p>
+        <div class="change-tags"><span>Deployment configuration</span><span>Preview only</span></div>
+      </div>
+    </div>
+<div class="change-entry">
+      <div class="change-date"><time datetime="2026-11-16">Nov 16, 2026</time></div>
+      <div>
+        <h3>Created the first VFW preview page <span class="version-badge">Unreleased</span></h3>
+        <p>Added a branded <code>/test/</code> page to give the Post a dedicated place to review proposed website updates.</p>
+        <div class="change-tags"><span>Review dashboard · /test/</span><span>Preview only</span></div>
+      </div>
+    </div>
+<div class="change-entry"><div class="change-date">v41</div><div><h3>Mobile Band Photo Caption Fix <span class="version-badge">v41</span></h3><p>Corrected the remaining Guitars for Vets mobile photo-card issue. Key changes: - The main band/rehearsal photo now uses `height:auto` on narrow mobile screens. - Both G4V photo images use the same 4:3 mobile tr</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v40</div><div><h3>Mobile Program Photo Stack Fix <span class="version-badge">v40</span></h3><p>Corrected the overlapping Guitars for Vets photo cards on narrow mobile screens. Key changes: - Removed the negative-margin overlap from the secondary G4V graduation photo on screens 700px and narrower. - Mobil</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v39</div><div><h3>Motto Order Correction <span class="version-badge">v39</span></h3><p>Corrected the Post's established phrase to the exact long-standing wording and order: **“Honoring The Past. Embracing The Future.”** Key changes: - Homepage hero headline now uses the correct phrase and order. </p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v38</div><div><h3>Established Post Motto <span class="version-badge">v38</span></h3><p>Elevated the Post's long-standing phrase, **“Honoring The Past. Embracing The Future.”**, into the site's primary identity message. Key changes: - Homepage hero now uses “Honoring The Past. Embracing The Future</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v37</div><div><h3>Final Audit, Routing &amp; Performance Polish <span class="version-badge">v37</span></h3><p>Completed a fresh production audit after the Veteran Relief, VA Benefits Assistance, accessibility, and analytics work. Key changes: - Aligned canonical URLs, internal links, Open Graph URLs, and `sitemap.xml` </p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v36</div><div><h3>VA Disability &amp; Benefits Assistance <span class="version-badge">v36</span></h3><p>Added a new veteran-support pathway for VA disability claims, appeals, benefits questions, and related assistance. Key changes: - Added dedicated `/veteran-benefits.html`. - Site language focuses on helping vet</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v35</div><div><h3>Veteran Relief, Directions &amp; Accessibility <span class="version-badge">v35</span></h3><p>Implemented all remaining recommended site improvements: 1. Dedicated `/veteran-relief.html` - Explains the request process and $300 committee authority - Explains Post approval for requests above $300 - Explai</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v34</div><div><h3>Veteran Relief Assistance <span class="version-badge">v34</span></h3><p>Added the Post 9126 Veteran Relief program to the site. Program details shown on the site: - Veteran Relief Committee may approve up to $300. - Requests above $300 go to the Post membership for consideration at</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v33</div><div><h3>Gaming Logo Fix <span class="version-badge">v33</span></h3><p>Corrected the Gaming Community logo distortion caused by HTML image dimensions remaining active while only the image width was being overridden. The Gaming logo now: - Preserves its 1:1 aspect ratio - Uses heig</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v32</div><div><h3>About Photo + Footer Repair <span class="version-badge">v32</span></h3><p>- Updated the About page's main photo to the newer group image showing Post 9126 members with community partners and a service dog. - Updated About-page social preview metadata to use the same photo. - Replaced</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v31</div><div><h3>Service Branch Logo Fix <span class="version-badge">v31</span></h3><p>Corrected the military branch emblem sizing on the homepage. The explicit HTML image dimensions added during the final optimization pass were allowing the emblems to stretch vertically once CSS changed their wi</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v30</div><div><h3>Latest Member Photo <span class="version-badge">v30</span></h3><p>Replaced the homepage hero member photo with the most recent VFW Post 9126 member group photo supplied by the Post. The image was optimized to WebP and the hero crop was tuned for the taller composition.</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v29</div><div><h3>Oklahoma Department Link <span class="version-badge">v29</span></h3><p>Replaced the former Oklahoma VFW Department calendar link with the official VFW Department of Oklahoma homepage across the site. Events-page card now: - Uses the heading "VFW Department of Oklahoma" - Describes</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v28</div><div><h3>Final Pass <span class="version-badge">v28</span></h3><p>Completed final production polish: SEO metadata, sitemap/robots, structured data, accessibility, keyboard/mobile navigation behavior, image layout stability, contact privacy-note wording, branded 404 page, and </p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v27</div><div><h3>Authentic Post Photography Pass <span class="version-badge">v27</span></h3><p>Integrated real VFW Post 9126 photography supplied by the Post across the site. Key changes: - Homepage hero now features a real Post member group photo, with the Post 9126 logo as a badge. - Homepage Guitars f</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v26</div><div><h3>Instagram Correction <span class="version-badge">v26</span></h3><p>Corrected the Post's Instagram account everywhere on the site to: https://www.instagram.com/vfw_post_9126/ Handle: @vfw_post_9126</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v25</div><div><h3>Social Feeds + Favicon <span class="version-badge">v25</span></h3><p>- Added a homepage “Follow VFW Post 9126” section with live Facebook Page timeline and Instagram profile embed. - Instagram profile: https://www.instagram.com/vfw_post_9126/ - Added Instagram to the site-wide f</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v24</div><div><h3>Full Audit + Typography Refresh <span class="version-badge">v24</span></h3><p>Performed a site-wide consistency and technical audit. Updated typography to a more distinctive, no-third-party-request font stack, fixed stale placeholder text, corrected a CSS variable issue, improved scholar</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v23</div><div><h3>Events Layout Refinement <span class="version-badge">v23</span></h3><p>Reworked the Events page for a cleaner visual hierarchy: - Next Upcoming Events now occupies the main left column at the top. - Regular Post Schedule and Oklahoma VFW Events are stacked in a narrower right colu</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v22</div><div><h3>Events + Gaming Refresh <span class="version-badge">v22</span></h3><p>Events: - Moved "Next Upcoming Events" agenda/list view above the monthly calendar. - Kept the monthly calendar below with the Regular Post Schedule and Oklahoma VFW Events cards. - Replaced development-style c</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v21</div><div><h3>Address Cleanup <span class="version-badge">v21</span></h3><p>Clarified the Post's two addresses: - Physical/Post location: 46 W 145th St South, Glenpool, OK 74033 - Mailing address: 14348 S Broadway St, Glenpool, OK 74033 The Contact page now shows each address once, cle</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v20</div><div><h3>Address Clarification <span class="version-badge">v20</span></h3><p>Updated Post address information to distinguish: - Physical address: 46 W 145th St South, Glenpool, OK 74033 - Mailing address: 14348 S Broadway St, Glenpool, OK 74033 The physical address remains the location </p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v19</div><div><h3>Monthly Meeting Potluck Correction <span class="version-badge">v19</span></h3><p>Updated all remaining meeting references so they consistently show: - Potluck at 5:00 PM - Monthly Post meeting at 5:30 PM - Third Sunday of each month</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v18</div><div><h3>Monthly Meeting Potluck <span class="version-badge">v18</span></h3><p>Updated recurring monthly meeting information to note: - Potluck at 5:00 PM - Post meeting at 5:30 PM - Third Sunday of each month</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v17</div><div><h3>Gaming Discord <span class="version-badge">v17</span></h3><p>Added the Post 9126 Gaming Community Discord invite: https://discord.gg/PSAdURVZNG Placement: - Prominent "Join the Discord" button in the Gaming page introduction - Second Discord button in the Gaming page Dis</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v16</div><div><h3>Events Page: Upcoming Events List <span class="version-badge">v16</span></h3><p>Kept the Google Calendar in Month view and added a second, shorter Google Calendar Agenda view directly beneath it. This gives visitors an at-a-glance monthly calendar plus a more readable list of upcoming even</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v15</div><div><h3>Post 9126 Header Branding <span class="version-badge">v15</span></h3><p>Updated the site header to use the official circular Post 9126 logo instead of the oversized generic VFW wordmark. The accompanying identity now reads "VFW Post 9126" on one line with "Glenpool, Oklahoma" benea</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v14</div><div><h3>Refreshed Termly Policies <span class="version-badge">v14</span></h3><p>Replaced the locally hosted Privacy Policy and Cookie Policy with the newest Termly-generated HTML supplied after the updated cookie scan and policy refresh. The current Cookie Policy includes the newly detecte</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v13</div><div><h3>Calendar Month View <span class="version-badge">v13</span></h3><p>Changed the embedded Post 9126 Google Calendar from Agenda view to Month view.</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v12</div><div><h3>Google Calendar Integration <span class="version-badge">v12</span></h3><p>The Events page now embeds the public VFW Post 9126 Google Calendar. Calendar ID: `vfwpost9126@gmail.com` Timezone: `America/Chicago` Display mode: Agenda The page retains the regular Post schedule as quick-ref</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v11</div><div><h3>Scholarship Link Correction <span class="version-badge">v11</span></h3><p>Corrected the Patriot's Pen and Voice of Democracy entry links by decoding the QR codes directly from the supplied flyers: - Patriot's Pen: https://bit.ly/4pyVRDs - Voice of Democracy: https://bit.ly/4htOUSf</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v10</div><div><h3>2026–2027 Scholarships <span class="version-badge">v10</span></h3><p>Expanded `/public/scholarships.html` with the supplied 2026–2027 Patriot's Pen and Voice of Democracy information, including eligibility, theme, format, deadline, national prize information, entry links, and do</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v9</div><div><h3>Navigation Button Balance <span class="version-badge">v9</span></h3><p>Adjusted the header so Donate and Join the VFW use the same height. Join remains slightly wider and red; Donate remains gold.</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v8</div><div><h3>Donations / Zeffy <span class="version-badge">v8</span></h3><p>Added `/public/donate.html` and embedded the Zeffy donation campaign: https://www.zeffy.com/en-US/donation-form/support-local-veterans-through-vfw-post--9126 The navigation now includes a gold Donate button, th</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v7</div><div><h3>Consent Preferences <span class="version-badge">v7</span></h3><p>Added Termly's permanent consent-preferences link to every page footer: `&lt;a href="#" class="termly-display-preferences"&gt;Consent Preferences&lt;/a&gt;` Visitors can use it at any time to reopen the Termly preference c</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v6</div><div><h3>Termly Consent Banner <span class="version-badge">v6</span></h3><p>Installed the Termly Consent Management Platform on every HTML page using: `https://app.termly.io/resource-blocker/d2a9b477-4a7d-46b9-b0a6-2892b2298f8f?autoBlock=on` The script is placed immediately after the o</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v5</div><div><h3>Cookie Policy <span class="version-badge">v5</span></h3><p>Termly Cookie Policy added at `/public/cookie-policy.html`. Footer links on all pages now include both Privacy Policy and Cookie Policy. The local Privacy Policy page also links to the Cookie Policy. Note: the </p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v4</div><div><h3>Privacy Policy <span class="version-badge">v4</span></h3><p>Termly Privacy Policy added at `/public/privacy-policy.html`. Footer links on all pages now point to the policy, and the contact-form privacy notice links to it. The Termly attribution is preserved.</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v3</div><div><h3>Formspree Contact Handling <span class="version-badge">v3</span></h3><p>A branded thank-you page is included at `/public/thank-you.html`. The Post currently uses Formspree's free plan, which does not provide a custom post-submission redirect. The branded thank-you page therefore ex</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v2</div><div><h3>Cloudflare Worker Deployment Settings <span class="version-badge">v2</span></h3><p>- Build command: leave blank - Deploy command: `npx wrangler deploy` The deployable website is in `/public`.</p><div class="change-tags"><span>README history</span></div></div></div>
+<div class="change-entry"><div class="change-date">v1</div><div><h3>Initial Website Build <span class="version-badge">v1</span></h3><p>Created the initial VFW Post 9126 website and deployable static-site structure, including the core public pages, shared navigation/footer, Post branding, and the `/public` directory used for Cloudflare Workers </p><div class="change-tags"><span>README history</span></div></div></div>
+</details><p class="change-note">This is a manually maintained summary for reviewers. The GitHub comparison above shows the definitive file-level differences between <code>main</code> and <code>preview</code>. Preview links and forms may still point to live external services.</p>
+</section>
+
+<div class="workspace">
+<aside class="sidebar" aria-label="Page selector"><h2>Pages to review</h2><p>Choose any page to load inside the preview.</p>
+<div class="section-title">About the Post</div><nav class="page-menu" aria-label="Post pages">
+<button class="page-link active" data-path="/" data-live="/" data-label="Homepage" aria-current="page">Homepage</button>
+<button class="page-link" data-path="/about" data-live="/about" data-label="About Us">About Us</button>
+<button class="page-link" data-path="/officers" data-live="/officers" data-label="Post Officers">Post Officers</button>
+<button class="page-link" data-path="/membership" data-live="/membership" data-label="Membership">Membership</button>
+</nav><div class="section-title">Programs and Support</div><nav class="page-menu" aria-label="Support pages">
+<button class="page-link" data-path="/programs" data-live="/programs" data-label="Programs">Programs</button>
+<button class="page-link" data-path="/veteran-relief" data-live="/veteran-relief" data-label="Veteran Relief">Veteran Relief</button>
+<button class="page-link" data-path="/veteran-benefits" data-live="/veteran-benefits" data-label="VA Benefits Assistance">VA Benefits Assistance</button>
+<button class="page-link" data-path="/scholarships" data-live="/scholarships" data-label="Scholarships">Scholarships</button>
+</nav><div class="section-title">Events and Community</div><nav class="page-menu" aria-label="Community pages">
+<button class="page-link" data-path="/events" data-live="/events" data-label="Events">Events</button>
+<button class="page-link" data-path="/gaming" data-live="/gaming" data-label="Gaming Community">Gaming Community</button>
+</nav><div class="section-title">Connect and Give</div><nav class="page-menu" aria-label="Contact and giving pages">
+<button class="page-link" data-path="/contact" data-live="/contact" data-label="Contact Us">Contact Us</button>
+<button class="page-link" data-path="/donate" data-live="/donate" data-label="Donate">Donate</button>
+</nav><p class="mini-note">Use this page to review proposed edits. Preview changes do not publish to the live Post website automatically.</p></aside>
+<section class="preview-panel" aria-label="Visual page preview"><div class="toolbar"><div><h2 id="page-title">Homepage</h2><small id="page-path">Test page · /</small></div><div class="control-group" role="group" aria-label="Preview screen size"><button type="button" data-size="desktop" aria-pressed="true">Desktop</button><button type="button" data-size="tablet" aria-pressed="false">Tablet</button><button type="button" data-size="mobile" aria-pressed="false">Phone</button></div></div>
+<div class="stage"><div class="device desktop" id="device"><iframe id="preview-frame" src="/" title="Website preview — Homepage" loading="eager"></iframe></div></div>
+<div class="stage-footer"><p>Page appearance may differ slightly on your actual device.</p><div><a id="open-full" target="_blank" rel="noopener" href="/">Open test page ↗</a><span aria-hidden="true"> &nbsp; · &nbsp; </span><a id="open-live" target="_blank" rel="noopener noreferrer" href="https://vfw9126.org/">Compare live ↗</a></div></div>
+</section></div>
+<section class="bottom"><h2>How we'll use this test site</h2><p>We will make future design and content changes on the <code>preview</code> branch first. Review them here, request edits, and only publish approved changes to the production <code>main</code> branch.</p></section><div class="footer">VFW Post 9126 · Working review copy · Glenpool, Oklahoma · Not an official application or donation page</div>
+</main>
+<script>
+(()=>{
+const frame=document.getElementById('preview-frame'),title=document.getElementById('page-title'),route=document.getElementById('page-path'),openFull=document.getElementById('open-full'),openLive=document.getElementById('open-live'),device=document.getElementById('device');
+document.querySelectorAll('button[data-path]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('button[data-path]').forEach(b=>{b.classList.remove('active');b.removeAttribute('aria-current')});button.classList.add('active');button.setAttribute('aria-current','page');
+  const p=button.dataset.path,live=button.dataset.live;frame.src=p;frame.title='Website preview — '+button.dataset.label;title.textContent=button.dataset.label;route.textContent='Test page · '+live;openFull.href=p;openLive.href='https://vfw9126.org'+live;
+}));
+document.querySelectorAll('button[data-size]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('button[data-size]').forEach(b=>b.setAttribute('aria-pressed','false'));button.setAttribute('aria-pressed','true');device.className='device '+button.dataset.size;
+}));
+})();
+</script>
+</body></html>
